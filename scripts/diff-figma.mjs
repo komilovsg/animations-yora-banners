@@ -7,11 +7,11 @@ import sharp from 'sharp';
 const W = 160, H = 600;
 const PAIRS = [
   ['employer-ru', 'Frame_2136137191'],
-  ['employer-tg', 'Frame_2136137193'],
+  ['employer-tj', 'Frame_2136137193'],
   ['jobseeker-ru', 'Frame_2136137198'],
-  ['jobseeker-tg', 'Frame_2136137199'],
+  ['jobseeker-tj', 'Frame_2136137199'],
   ['brand-ru', 'Frame_2136137201'],
-  ['brand-tg', 'Frame_2136137203'],
+  ['brand-tj', 'Frame_2136137203'],
 ];
 
 mkdirSync('refs/diff', { recursive: true });

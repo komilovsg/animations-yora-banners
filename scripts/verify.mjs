@@ -15,11 +15,11 @@ const W = 320, H = 1200, R = 3;
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const PAIRS = [
   ['employer-ru', 'Frame_2136137191'],
-  ['employer-tg', 'Frame_2136137193'],
+  ['employer-tj', 'Frame_2136137193'],
   ['jobseeker-ru', 'Frame_2136137198'],
-  ['jobseeker-tg', 'Frame_2136137199'],
+  ['jobseeker-tj', 'Frame_2136137199'],
   ['brand-ru', 'Frame_2136137201'],
-  ['brand-tg', 'Frame_2136137203'],
+  ['brand-tj', 'Frame_2136137203'],
 ];
 
 mkdirSync('refs/shot', { recursive: true });

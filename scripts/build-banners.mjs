@@ -13,13 +13,16 @@ const PLAYS = 3;                        // IAB LEAN: 15s of motion total
 const EASE = 'cubic-bezier(.16,.84,.44,1)';        // power3.out
 const EASE_CTA = 'cubic-bezier(.34,1.56,.64,1)';   // back.out(1.6)
 
+// "tj" throughout, by the client's house convention — folders, labels and the lang
+// attribute alike. Note for anyone running an HTML validator over these: Tajik's BCP-47
+// subtag is "tg", so lang="tj" will be flagged. Deliberate, not a typo.
 const SLUGS = {
   1: { slug: 'employer-ru', lang: 'ru' },
-  2: { slug: 'employer-tg', lang: 'tg' },
+  2: { slug: 'employer-tj', lang: 'tj' },
   3: { slug: 'jobseeker-ru', lang: 'ru' },
-  4: { slug: 'jobseeker-tg', lang: 'tg' },
+  4: { slug: 'jobseeker-tj', lang: 'tj' },
   5: { slug: 'brand-ru', lang: 'ru' },
-  6: { slug: 'brand-tg', lang: 'tg' },
+  6: { slug: 'brand-tj', lang: 'tj' },
 };
 
 const spec = JSON.parse(readFileSync('refs/spec.json', 'utf8'));

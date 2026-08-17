@@ -1,0 +1,7 @@
+# Build-time only — the deployed site is index.html + out/ + dist/.
+refs/
+scripts/
+node_modules/
+package.json
+package-lock.json
+.figma-token

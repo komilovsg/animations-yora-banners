@@ -15,11 +15,11 @@ const nodes = JSON.parse(readFileSync('refs/nodes.json', 'utf8')).nodes;
 
 const SCENES = [
   { id: 1, lang: 'ru', from: 'Frame 2136137190', to: 'Frame 2136137191' },
-  { id: 2, lang: 'tg', from: 'Frame 2136137192', to: 'Frame 2136137193' },
+  { id: 2, lang: 'tj', from: 'Frame 2136137192', to: 'Frame 2136137193' },
   { id: 3, lang: 'ru', from: 'Frame 2136137194', to: 'Frame 2136137198' },
-  { id: 4, lang: 'tg', from: 'Frame 2136137197', to: 'Frame 2136137199' },
+  { id: 4, lang: 'tj', from: 'Frame 2136137197', to: 'Frame 2136137199' },
   { id: 5, lang: 'ru', from: 'Frame 2136137200', to: 'Frame 2136137201' },
-  { id: 6, lang: 'tg', from: 'Frame 2136137202', to: 'Frame 2136137203' },
+  { id: 6, lang: 'tj', from: 'Frame 2136137202', to: 'Frame 2136137203' },
 ];
 
 const frame = (name) => Object.values(nodes).find((v) => v.document.name === name).document;

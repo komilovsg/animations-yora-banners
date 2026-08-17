@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="tg">
+<html lang="tj">
 <head>
 <meta charset="utf-8">
 <meta name="ad.size" content="width=160,height=600">
-<title>Yora.tj 160x600 — employer-tg</title>
+<title>Yora.tj 160x600 — jobseeker-tj</title>
 <!--
-  Scene 2 of the Figma set, rebuilt from the two keyframes:
+  Scene 4 of the Figma set, rebuilt from the two keyframes:
   layers park off-canvas, then slide to rest, staggered top to bottom.
   Text ships as outlined SVG — the comp uses Loos Var, which is not licensed to us.
   Clock: entrances 0.15-1.8s, end frame held ~3.2s, 3 plays = 15s.
@@ -20,13 +20,15 @@
      positioned layer 1px in from the Figma coordinates. Draw it over the top instead. */
   #banner::after{content:"";position:absolute;inset:0;pointer-events:none;
     border:1px solid rgba(0,0,0,.15)}
-  .bg{position:absolute;left:0;top:0;width:160px;height:600px;will-change:transform}
+  .bg{position:absolute;left:0;top:0;width:190px;height:600px;will-change:transform}
   .l{position:absolute;will-change:transform;transform:translateZ(0)}
-  .l-logo{left:42px;top:150.8px;width:76px;height:25px;--dx:121px;--dy:0px;animation:k-logo var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
-  .l-headline{left:6.6px;top:194.9px;width:147px;height:58px;--dx:-159px;--dy:-1px;animation:k-headline var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
-  .l-subline{left:20.4px;top:276.9px;width:119px;height:23px;--dx:-148px;--dy:0px;animation:k-subline var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
-  .l-cta{left:32.5px;top:359px;width:96px;height:37px;--dx:-133.5px;--dy:0px;animation:k-cta var(--cycle) var(--plays) both cubic-bezier(.34,1.56,.64,1)}
-  .l-contacts{left:13px;top:419px;width:134px;height:12px;--dx:150px;--dy:0px;animation:k-contacts var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  .bg{--pan:-30px;animation:k-bg var(--cycle) var(--plays) both cubic-bezier(.25,.46,.45,.94)}
+  .l-logo{left:42px;top:150.8px;width:76px;height:25px;--dx:-160px;--dy:0px;animation:k-logo var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  .l-headline{left:9.4px;top:193.7px;width:142px;height:38px;--dx:-160px;--dy:0px;animation:k-headline var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  .l-subline{left:20.4px;top:276.9px;width:119px;height:23px;--dx:-160px;--dy:0px;animation:k-subline var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  .l-cta{left:36px;top:359px;width:89px;height:23px;--dx:-160px;--dy:0px;animation:k-cta var(--cycle) var(--plays) both cubic-bezier(.34,1.56,.64,1)}
+  .l-contacts{left:13px;top:419px;width:134px;height:12px;--dx:-160px;--dy:0px;animation:k-contacts var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  @keyframes k-bg{0%{transform:translate3d(0,0,0)}44%,100%{transform:translate3d(var(--pan),0,0)}}
   @keyframes k-logo{0%,3%{transform:translate3d(var(--dx),var(--dy),0)}20%,100%{transform:translate3d(0,0,0)}}
   @keyframes k-headline{0%,7%{transform:translate3d(var(--dx),var(--dy),0)}24%,100%{transform:translate3d(0,0,0)}}
   @keyframes k-subline{0%,11%{transform:translate3d(var(--dx),var(--dy),0)}28%,100%{transform:translate3d(0,0,0)}}
@@ -48,7 +50,7 @@
 </script>
 </head>
 <body>
-<div id="banner" role="link" aria-label="Корманди худро пайдо кунед! — Yora.tj">
+<div id="banner" role="link" aria-label="Мо ҷойи корӣ дорем! — Yora.tj">
   <img class="bg" src="assets/bg.jpg" alt="">
   <img class="l l-logo" src="assets/logo.svg" alt="">
   <img class="l l-headline" src="assets/headline.svg" alt="">
