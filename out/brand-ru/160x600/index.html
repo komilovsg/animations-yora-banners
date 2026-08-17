@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="ad.size" content="width=160,height=600">
+<title>Yora.tj 160x600 — brand-ru</title>
+<!--
+  Scene 5 of the Figma set, rebuilt from the two keyframes:
+  layers park off-canvas, then slide to rest, staggered top to bottom.
+  Text ships as outlined SVG — the comp uses Loos Var, which is not licensed to us.
+  Clock: entrances 0.15-1.8s, end frame held ~3.2s, 3 plays = 15s.
+-->
+<style>
+  :root{--w:160px;--h:600px;--cycle:5s;--plays:3}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:var(--w);height:var(--h);overflow:hidden;background:#7b3ff2}
+  #banner{position:relative;width:var(--w);height:var(--h);overflow:hidden;
+    cursor:pointer;user-select:none;background:#7b3ff2}
+  /* Google wants a visible edge, but a border on #banner shifts every absolutely
+     positioned layer 1px in from the Figma coordinates. Draw it over the top instead. */
+  #banner::after{content:"";position:absolute;inset:0;pointer-events:none;
+    border:1px solid rgba(0,0,0,.15)}
+  .bg{position:absolute;left:0;top:0;width:160px;height:600px;will-change:transform}
+  .l{position:absolute;will-change:transform;transform:translateZ(0)}
+  .l-logo{left:51px;top:153.8px;width:57px;height:19px;--dx:-110px;--dy:0px;animation:k-logo var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  .l-headline{left:6px;top:191.7px;width:147px;height:65px;--dx:160px;--dy:0px;animation:k-headline var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  .l-cta{left:9px;top:359px;width:143px;height:23px;--dx:-160px;--dy:0px;animation:k-cta var(--cycle) var(--plays) both cubic-bezier(.34,1.56,.64,1)}
+  .l-contacts{left:13px;top:419px;width:134px;height:12px;--dx:-160px;--dy:0px;animation:k-contacts var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  @keyframes k-logo{0%,3%{transform:translate3d(var(--dx),var(--dy),0)}20%,100%{transform:translate3d(0,0,0)}}
+  @keyframes k-headline{0%,7%{transform:translate3d(var(--dx),var(--dy),0)}24%,100%{transform:translate3d(0,0,0)}}
+  @keyframes k-cta{0%,11%{transform:translate3d(var(--dx),var(--dy),0)}31%,100%{transform:translate3d(0,0,0)}}
+  @keyframes k-contacts{0%,15%{transform:translate3d(var(--dx),var(--dy),0)}32%,100%{transform:translate3d(0,0,0)}}
+  /* backup.sh loads ?frame=end to screenshot the resting frame. */
+  .end .bg,.end .l{animation:none!important}
+  .end .bg{transform:translate3d(var(--pan,0),0,0)}
+  .end .l{transform:translate3d(0,0,0)}
+  @media (prefers-reduced-motion:reduce){
+    .bg,.l{animation:none!important}
+    .bg{transform:translate3d(var(--pan,0),0,0)}
+    .l{transform:translate3d(0,0,0)}
+  }
+</style>
+<script>
+  // Applied before paint so the end-frame screenshot never catches scene 1.
+  if (location.search.indexOf("frame=end") > -1) document.documentElement.className = "end";
+</script>
+</head>
+<body>
+<div id="banner" role="link" aria-label="Yora.tj - вакансии  по всему Таджикистану! — Yora.tj">
+  <img class="bg" src="assets/bg.jpg" alt="">
+  <img class="l l-logo" src="assets/logo.svg" alt="">
+  <img class="l l-headline" src="assets/headline.svg" alt="">
+  <img class="l l-cta" src="assets/cta.svg" alt="">
+  <img class="l l-contacts" src="assets/contacts.svg" alt="">
+</div>
+<script>
+  // Ad servers rewrite this exact literal. Global var, first script, one string.
+  var clickTag = "https://yora.tj/";
+</script>
+<script>
+  document.getElementById("banner").addEventListener("click", function () {
+    window.open(clickTag, "_blank");
+  });
+</script>
+</body>
+</html>

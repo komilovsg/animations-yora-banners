@@ -1,0 +1,407 @@
+[
+  {
+    "id": 1,
+    "lang": "ru",
+    "from": "Frame 2136137190",
+    "to": "Frame 2136137191",
+    "bgPan": 0,
+    "layers": [
+      {
+        "role": "logo",
+        "svg": "scene1-logo.svg",
+        "text": "",
+        "x": 42,
+        "y": 150.8,
+        "w": 75,
+        "h": 24.8,
+        "dx": 121,
+        "dy": 0,
+        "svgW": 76,
+        "svgH": 25
+      },
+      {
+        "role": "headline",
+        "svg": "scene1-headline.svg",
+        "text": "Найдите своего сотрудника!",
+        "x": 9.3,
+        "y": 193.7,
+        "w": 141.7,
+        "h": 58.3,
+        "dx": -160,
+        "dy": 0,
+        "svgW": 142,
+        "svgH": 59
+      },
+      {
+        "role": "subline",
+        "svg": "scene1-subline.svg",
+        "text": "Размещайте вакансии на Yora.tj!",
+        "x": 24.8,
+        "y": 276.9,
+        "w": 110.5,
+        "h": 22.5,
+        "dx": -148,
+        "dy": 0,
+        "svgW": 111,
+        "svgH": 23
+      },
+      {
+        "role": "cta",
+        "svg": "scene1-cta.svg",
+        "text": "Разместить вакансию",
+        "x": 6,
+        "y": 342,
+        "w": 148.7,
+        "h": 22.9,
+        "dx": -156,
+        "dy": 0,
+        "svgW": 149,
+        "svgH": 23
+      },
+      {
+        "role": "contacts",
+        "svg": "scene1-contacts.svg",
+        "text": "@weyora / +992 553 06 2222",
+        "x": 13,
+        "y": 419,
+        "w": 133.5,
+        "h": 11.1,
+        "dx": 150,
+        "dy": 0,
+        "svgW": 134,
+        "svgH": 12
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "lang": "tg",
+    "from": "Frame 2136137192",
+    "to": "Frame 2136137193",
+    "bgPan": 0,
+    "layers": [
+      {
+        "role": "logo",
+        "svg": "scene2-logo.svg",
+        "text": "",
+        "x": 42,
+        "y": 150.8,
+        "w": 75,
+        "h": 24.8,
+        "dx": 121,
+        "dy": 0,
+        "svgW": 76,
+        "svgH": 25
+      },
+      {
+        "role": "headline",
+        "svg": "scene2-headline.svg",
+        "text": "Корманди худро пайдо кунед!",
+        "x": 6.6,
+        "y": 194.9,
+        "w": 146.4,
+        "h": 57.1,
+        "dx": -159,
+        "dy": -1,
+        "svgW": 147,
+        "svgH": 58
+      },
+      {
+        "role": "subline",
+        "svg": "scene2-subline.svg",
+        "text": "Ҷойи кориро \nдар Yora.tj эълон кунед!",
+        "x": 20.4,
+        "y": 276.9,
+        "w": 118.9,
+        "h": 22.5,
+        "dx": -148,
+        "dy": 0,
+        "svgW": 119,
+        "svgH": 23
+      },
+      {
+        "role": "cta",
+        "svg": "scene2-cta.svg",
+        "text": "Ҷойи кориро \nнашр кунед",
+        "x": 32.5,
+        "y": 359,
+        "w": 95.7,
+        "h": 36.9,
+        "dx": -133.5,
+        "dy": 0,
+        "svgW": 96,
+        "svgH": 37
+      },
+      {
+        "role": "contacts",
+        "svg": "scene2-contacts.svg",
+        "text": "@weyora / +992 553 06 2222",
+        "x": 13,
+        "y": 419,
+        "w": 133.5,
+        "h": 11.1,
+        "dx": 150,
+        "dy": 0,
+        "svgW": 134,
+        "svgH": 12
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "lang": "ru",
+    "from": "Frame 2136137194",
+    "to": "Frame 2136137198",
+    "bgPan": 0,
+    "layers": [
+      {
+        "role": "logo",
+        "svg": "scene3-logo.svg",
+        "text": "",
+        "x": 42,
+        "y": 150.8,
+        "w": 75,
+        "h": 24.8,
+        "dx": -160,
+        "dy": 0,
+        "svgW": 76,
+        "svgH": 25
+      },
+      {
+        "role": "headline",
+        "svg": "scene3-headline.svg",
+        "text": "У нас вакансия!",
+        "x": 22.8,
+        "y": 206.9,
+        "w": 114.9,
+        "h": 32.3,
+        "dx": -160,
+        "dy": 0,
+        "svgW": 115,
+        "svgH": 33
+      },
+      {
+        "role": "subline",
+        "svg": "scene3-subline.svg",
+        "text": "Ищите работу на Yora.tj!",
+        "x": 18.9,
+        "y": 276.6,
+        "w": 120.2,
+        "h": 9.8,
+        "dx": -160,
+        "dy": 0,
+        "svgW": 121,
+        "svgH": 10
+      },
+      {
+        "role": "cta",
+        "svg": "scene3-cta.svg",
+        "text": "Зарегистрироваться",
+        "x": 9,
+        "y": 359,
+        "w": 142.7,
+        "h": 22.9,
+        "dx": -160,
+        "dy": 0,
+        "svgW": 143,
+        "svgH": 23
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "lang": "tg",
+    "from": "Frame 2136137197",
+    "to": "Frame 2136137199",
+    "bgPan": -30,
+    "layers": [
+      {
+        "role": "logo",
+        "svg": "scene4-logo.svg",
+        "text": "",
+        "x": 42,
+        "y": 150.8,
+        "w": 75,
+        "h": 24.8,
+        "dx": -160,
+        "dy": 0,
+        "svgW": 76,
+        "svgH": 25
+      },
+      {
+        "role": "headline",
+        "svg": "scene4-headline.svg",
+        "text": "Мо ҷойи корӣ дорем!",
+        "x": 9.4,
+        "y": 193.7,
+        "w": 141.6,
+        "h": 37.3,
+        "dx": -160,
+        "dy": 0,
+        "svgW": 142,
+        "svgH": 38
+      },
+      {
+        "role": "subline",
+        "svg": "scene4-subline.svg",
+        "text": "Ҷойи кориро \nдар Yora.tj эълон кунед!",
+        "x": 20.4,
+        "y": 276.9,
+        "w": 118.9,
+        "h": 22.5,
+        "dx": -160,
+        "dy": 0,
+        "svgW": 119,
+        "svgH": 23
+      },
+      {
+        "role": "cta",
+        "svg": "scene4-cta.svg",
+        "text": "Бақайдгирӣ",
+        "x": 36,
+        "y": 359,
+        "w": 88.7,
+        "h": 22.9,
+        "dx": -160,
+        "dy": 0,
+        "svgW": 89,
+        "svgH": 23
+      },
+      {
+        "role": "contacts",
+        "svg": "scene4-contacts.svg",
+        "text": "@weyora / +992 553 06 2222",
+        "x": 13,
+        "y": 419,
+        "w": 133.5,
+        "h": 11.1,
+        "dx": -160,
+        "dy": 0,
+        "svgW": 134,
+        "svgH": 12
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "lang": "ru",
+    "from": "Frame 2136137200",
+    "to": "Frame 2136137201",
+    "bgPan": 0,
+    "layers": [
+      {
+        "role": "logo",
+        "svg": "scene5-logo.svg",
+        "text": "",
+        "x": 51,
+        "y": 153.8,
+        "w": 57,
+        "h": 18.8,
+        "dx": -110,
+        "dy": 0,
+        "svgW": 57,
+        "svgH": 19
+      },
+      {
+        "role": "headline",
+        "svg": "scene5-headline.svg",
+        "text": "Yora.tj - вакансии \nпо всему Таджикистану!",
+        "x": 6,
+        "y": 191.7,
+        "w": 146.9,
+        "h": 64.5,
+        "dx": 160,
+        "dy": 0,
+        "svgW": 147,
+        "svgH": 65
+      },
+      {
+        "role": "cta",
+        "svg": "scene5-cta.svg",
+        "text": "Зарегистрироваться",
+        "x": 9,
+        "y": 359,
+        "w": 142.7,
+        "h": 22.9,
+        "dx": -160,
+        "dy": 0,
+        "svgW": 143,
+        "svgH": 23
+      },
+      {
+        "role": "contacts",
+        "svg": "scene5-contacts.svg",
+        "text": "@weyora / +992 553 06 2222",
+        "x": 13,
+        "y": 419,
+        "w": 133.5,
+        "h": 11.1,
+        "dx": -160,
+        "dy": 0,
+        "svgW": 134,
+        "svgH": 12
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "lang": "tg",
+    "from": "Frame 2136137202",
+    "to": "Frame 2136137203",
+    "bgPan": 0,
+    "layers": [
+      {
+        "role": "logo",
+        "svg": "scene6-logo.svg",
+        "text": "",
+        "x": 51,
+        "y": 153.8,
+        "w": 57,
+        "h": 18.8,
+        "dx": -110,
+        "dy": 0,
+        "svgW": 57,
+        "svgH": 19
+      },
+      {
+        "role": "headline",
+        "svg": "scene6-headline.svg",
+        "text": "Yora.tj — ҷойҳои корӣ дар тамоми Тоҷикистон!",
+        "x": 19.4,
+        "y": 191.7,
+        "w": 119.9,
+        "h": 63,
+        "dx": 150,
+        "dy": 0,
+        "svgW": 120,
+        "svgH": 64
+      },
+      {
+        "role": "cta",
+        "svg": "scene6-cta.svg",
+        "text": "Бақайдгирӣ",
+        "x": 36,
+        "y": 359,
+        "w": 88.7,
+        "h": 22.9,
+        "dx": -150,
+        "dy": 0,
+        "svgW": 89,
+        "svgH": 23
+      },
+      {
+        "role": "contacts",
+        "svg": "scene6-contacts.svg",
+        "text": "@weyora / +992 553 06 2222",
+        "x": 13,
+        "y": 419,
+        "w": 133.5,
+        "h": 11.1,
+        "dx": -150,
+        "dy": 0,
+        "svgW": 134,
+        "svgH": 12
+      }
+    ]
+  }
+]
