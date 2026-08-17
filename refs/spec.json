@@ -59,17 +59,32 @@
         "svgH": 23
       },
       {
-        "role": "contacts",
-        "svg": "scene1-contacts.svg",
-        "text": "@weyora / +992 553 06 2222",
-        "x": 13,
-        "y": 419,
-        "w": 133.5,
-        "h": 11.1,
+        "role": "telegram",
+        "svg": "scene1-telegram.svg",
+        "text": "@weyora",
+        "x": 13.7,
+        "y": 421.4,
+        "w": 40.7,
+        "h": 8.7,
         "dx": 150,
         "dy": 0,
-        "svgW": 134,
-        "svgH": 12
+        "svgW": 40.73,
+        "svgH": 8.68,
+        "anchorY": 424.6
+      },
+      {
+        "role": "phone",
+        "svg": "scene1-phone.svg",
+        "text": "+992 553 06 2222",
+        "x": 67.1,
+        "y": 421.4,
+        "w": 79.1,
+        "h": 8.7,
+        "dx": 150,
+        "dy": 0,
+        "svgW": 79.07,
+        "svgH": 8.68,
+        "anchorY": 424.6
       }
     ]
   },
@@ -133,17 +148,32 @@
         "svgH": 37
       },
       {
-        "role": "contacts",
-        "svg": "scene2-contacts.svg",
-        "text": "@weyora / +992 553 06 2222",
-        "x": 13,
-        "y": 419,
-        "w": 133.5,
-        "h": 11.1,
+        "role": "telegram",
+        "svg": "scene2-telegram.svg",
+        "text": "@weyora",
+        "x": 13.7,
+        "y": 421.4,
+        "w": 40.7,
+        "h": 8.7,
         "dx": 150,
         "dy": 0,
-        "svgW": 134,
-        "svgH": 12
+        "svgW": 40.73,
+        "svgH": 8.68,
+        "anchorY": 424.6
+      },
+      {
+        "role": "phone",
+        "svg": "scene2-phone.svg",
+        "text": "+992 553 06 2222",
+        "x": 67.1,
+        "y": 421.4,
+        "w": 79.1,
+        "h": 8.7,
+        "dx": 150,
+        "dy": 0,
+        "svgW": 79.07,
+        "svgH": 8.68,
+        "anchorY": 424.6
       }
     ]
   },
@@ -268,17 +298,32 @@
         "svgH": 23
       },
       {
-        "role": "contacts",
-        "svg": "scene4-contacts.svg",
-        "text": "@weyora / +992 553 06 2222",
-        "x": 13,
-        "y": 419,
-        "w": 133.5,
-        "h": 11.1,
+        "role": "telegram",
+        "svg": "scene4-telegram.svg",
+        "text": "@weyora",
+        "x": 13.7,
+        "y": 421.4,
+        "w": 40.7,
+        "h": 8.7,
         "dx": -160,
         "dy": 0,
-        "svgW": 134,
-        "svgH": 12
+        "svgW": 40.73,
+        "svgH": 8.68,
+        "anchorY": 424.6
+      },
+      {
+        "role": "phone",
+        "svg": "scene4-phone.svg",
+        "text": "+992 553 06 2222",
+        "x": 67.1,
+        "y": 421.4,
+        "w": 79.1,
+        "h": 8.7,
+        "dx": -160,
+        "dy": 0,
+        "svgW": 79.07,
+        "svgH": 8.68,
+        "anchorY": 424.6
       }
     ]
   },
@@ -329,17 +374,32 @@
         "svgH": 23
       },
       {
-        "role": "contacts",
-        "svg": "scene5-contacts.svg",
-        "text": "@weyora / +992 553 06 2222",
-        "x": 13,
-        "y": 419,
-        "w": 133.5,
-        "h": 11.1,
+        "role": "telegram",
+        "svg": "scene5-telegram.svg",
+        "text": "@weyora",
+        "x": 13.7,
+        "y": 421.4,
+        "w": 40.7,
+        "h": 8.7,
         "dx": -160,
         "dy": 0,
-        "svgW": 134,
-        "svgH": 12
+        "svgW": 40.73,
+        "svgH": 8.68,
+        "anchorY": 424.6
+      },
+      {
+        "role": "phone",
+        "svg": "scene5-phone.svg",
+        "text": "+992 553 06 2222",
+        "x": 67.1,
+        "y": 421.4,
+        "w": 79.1,
+        "h": 8.7,
+        "dx": -160,
+        "dy": 0,
+        "svgW": 79.07,
+        "svgH": 8.68,
+        "anchorY": 424.6
       }
     ]
   },
@@ -390,17 +450,32 @@
         "svgH": 23
       },
       {
-        "role": "contacts",
-        "svg": "scene6-contacts.svg",
-        "text": "@weyora / +992 553 06 2222",
-        "x": 13,
-        "y": 419,
-        "w": 133.5,
-        "h": 11.1,
+        "role": "telegram",
+        "svg": "scene6-telegram.svg",
+        "text": "@weyora",
+        "x": 13.7,
+        "y": 421.4,
+        "w": 40.7,
+        "h": 8.7,
         "dx": -150,
         "dy": 0,
-        "svgW": 134,
-        "svgH": 12
+        "svgW": 40.73,
+        "svgH": 8.68,
+        "anchorY": 424.6
+      },
+      {
+        "role": "phone",
+        "svg": "scene6-phone.svg",
+        "text": "+992 553 06 2222",
+        "x": 67.1,
+        "y": 421.4,
+        "w": 79.1,
+        "h": 8.7,
+        "dx": -150,
+        "dy": 0,
+        "svgW": 79.07,
+        "svgH": 8.68,
+        "anchorY": 424.6
       }
     ]
   }

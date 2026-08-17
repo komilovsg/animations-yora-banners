@@ -22,14 +22,22 @@
     border:1px solid rgba(0,0,0,.15)}
   .bg{position:absolute;left:0;top:0;width:160px;height:600px;will-change:transform}
   .l{position:absolute;will-change:transform;transform:translateZ(0)}
+  /* Lifting the contacts put them over the bright diagonal on the jobseeker backgrounds:
+     mean luminance 182-204 of 255 there, peaking at pure white, so plain white text has
+     nothing to sit against. A tight dark halo restores the edge, a softer one underneath
+     gives it weight. Static filter, not animated. */
+  .l-telegram,.l-phone{filter:drop-shadow(0 0 1px rgba(0,0,0,.9))
+    drop-shadow(0 0 2px rgba(0,0,0,.65)) drop-shadow(0 1px 3px rgba(0,0,0,.45))}
   .l-logo{left:51px;top:153.8px;width:57px;height:19px;--dx:-110px;--dy:0px;animation:k-logo var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
   .l-headline{left:6px;top:191.7px;width:147px;height:65px;--dx:160px;--dy:0px;animation:k-headline var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
-  .l-cta{left:9px;top:359px;width:143px;height:23px;--dx:-160px;--dy:0px;animation:k-cta var(--cycle) var(--plays) both cubic-bezier(.34,1.56,.64,1)}
-  .l-contacts{left:13px;top:419px;width:134px;height:12px;--dx:-160px;--dy:0px;animation:k-contacts var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  .l-cta{left:9px;top:343px;width:143px;height:23px;--dx:-160px;--dy:0px;animation:k-cta var(--cycle) var(--plays) both cubic-bezier(.34,1.56,.64,1)}
+  .l-telegram{left:52.51px;top:394.88px;width:54.99px;height:11.72px;--dx:-107.49px;--dy:0px;animation:k-telegram var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  .l-phone{left:26.63px;top:410.6px;width:106.74px;height:11.72px;--dx:-133.37px;--dy:0px;animation:k-phone var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
   @keyframes k-logo{0%,3%{transform:translate3d(var(--dx),var(--dy),0)}20%,100%{transform:translate3d(0,0,0)}}
   @keyframes k-headline{0%,7%{transform:translate3d(var(--dx),var(--dy),0)}24%,100%{transform:translate3d(0,0,0)}}
   @keyframes k-cta{0%,11%{transform:translate3d(var(--dx),var(--dy),0)}31%,100%{transform:translate3d(0,0,0)}}
-  @keyframes k-contacts{0%,15%{transform:translate3d(var(--dx),var(--dy),0)}32%,100%{transform:translate3d(0,0,0)}}
+  @keyframes k-telegram{0%,15%{transform:translate3d(var(--dx),var(--dy),0)}32%,100%{transform:translate3d(0,0,0)}}
+  @keyframes k-phone{0%,19%{transform:translate3d(var(--dx),var(--dy),0)}36%,100%{transform:translate3d(0,0,0)}}
   /* backup.sh loads ?frame=end to screenshot the resting frame. */
   .end .bg,.end .l{animation:none!important}
   .end .bg{transform:translate3d(var(--pan,0),0,0)}
@@ -51,7 +59,8 @@
   <img class="l l-logo" src="assets/logo.svg" alt="">
   <img class="l l-headline" src="assets/headline.svg" alt="">
   <img class="l l-cta" src="assets/cta.svg" alt="">
-  <img class="l l-contacts" src="assets/contacts.svg" alt="">
+  <img class="l l-telegram" src="assets/telegram.svg" alt="">
+  <img class="l l-phone" src="assets/phone.svg" alt="">
 </div>
 <script>
   // Ad servers rewrite this exact literal. Global var, first script, one string.

@@ -7,7 +7,20 @@
 // stagger has to live inside one shared cycle as percentages.
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync } from 'node:fs';
 
-const CLICK_URL = 'https://yora.tj/';   // assumption: no per-scene landing page was given
+// Landing page per message, not per language: both the RU and TJ cut of a message go to
+// the same URL, which is what the client specified.
+const CLICK = {
+  employer: 'https://yora.tj/ru',                                  // "ищу сотрудников"
+  jobseeker: 'https://yora.tj/ru/vacancies?currency_id=2&page=1',  // список вакансий
+  brand: 'https://yora.tj/',
+};
+
+// Contacts are re-laid-out rather than copied from the comp: the client wants the Telegram
+// handle and the phone on their own lines and bigger, and the CTA block sitting higher.
+const CONTACTS_SCALE = 1.35;
+const CONTACTS_GAP = 4;                 // px between the two lines
+const LIFT = 16;                        // px the CTA and the contacts move up
+
 const CYCLE = 5;                        // seconds per play
 const PLAYS = 3;                        // IAB LEAN: 15s of motion total
 const EASE = 'cubic-bezier(.16,.84,.44,1)';        // power3.out
@@ -34,8 +47,43 @@ for (const scene of spec) {
   const dir = `out/${slug}/160x600`;
   mkdirSync(`${dir}/assets`, { recursive: true });
 
+  const layers = scene.layers.map((l) => ({ ...l }));
+
+  // "У нас вакансия" is the one comp drawn without a contacts strip, but the client wants
+  // the handle and the number on every creative. Borrow the lines from scene 1 — same
+  // handle, same number — and bring them in from whichever side this scene uses.
+  if (!layers.some((l) => l.role === 'telegram')) {
+    const donor = spec.find((s) => s.layers.some((l) => l.role === 'telegram'));
+    const inbound = layers.find((l) => l.role === 'cta')?.dx ?? -160;
+    for (const role of ['telegram', 'phone']) {
+      layers.push({ ...donor.layers.find((l) => l.role === role), dx: Math.sign(inbound) * 160 });
+    }
+  }
+
+  // Stack the two contact lines centred, scaled up, keeping the block centred on the
+  // strip's original eye-line before the whole thing is lifted.
+  const tg = layers.find((l) => l.role === 'telegram');
+  const phone = layers.find((l) => l.role === 'phone');
+  if (tg && phone) {
+    for (const l of [tg, phone]) { l.svgW *= CONTACTS_SCALE; l.svgH *= CONTACTS_SCALE; }
+    const blockH = tg.svgH + CONTACTS_GAP + phone.svgH;
+    const top = tg.anchorY - blockH / 2 - LIFT;
+    tg.x = (160 - tg.svgW) / 2;
+    tg.y = top;
+    phone.x = (160 - phone.svgW) / 2;
+    phone.y = top + tg.svgH + CONTACTS_GAP;
+    // Re-derive the travel: the lines moved, so the comp's offsets no longer park them
+    // cleanly outside the frame.
+    for (const l of [tg, phone]) l.dx = l.dx > 0 ? 160 - l.x : -(l.x + l.svgW);
+  }
+
+  const cta = layers.find((l) => l.role === 'cta');
+  if (cta) cta.y -= LIFT;
+
+  layers.sort((p, q) => p.y - q.y);   // stagger follows the reading order
+
   copyFileSync(`refs/bg/scene${scene.id}.jpg`, `${dir}/assets/bg.jpg`);
-  for (const l of scene.layers) copyFileSync(`refs/svg/${l.svg}`, `${dir}/assets/${l.role}.svg`);
+  for (const l of layers) copyFileSync(`refs/svg/${l.svg}`, `${dir}/assets/${l.role}.svg`);
 
   // Background slice is cut wider than the frame only when the scene pans it.
   const bgW = 160 + Math.abs(scene.bgPan);
@@ -47,7 +95,7 @@ for (const scene of spec) {
     frames.push(`@keyframes k-bg{0%{transform:translate3d(0,0,0)}44%,100%{transform:translate3d(var(--pan),0,0)}}`);
   }
 
-  scene.layers.forEach((l, i) => {
+  layers.forEach((l, i) => {
     const isCta = l.role === 'cta';
     const start = 3 + i * 4;
     const end = start + 17 + (isCta ? 3 : 0); // the overshoot needs room to settle
@@ -90,6 +138,12 @@ for (const scene of spec) {
     border:1px solid rgba(0,0,0,.15)}
   .bg{position:absolute;left:0;top:0;width:${bgW}px;height:600px;will-change:transform}
   .l{position:absolute;will-change:transform;transform:translateZ(0)}
+  /* Lifting the contacts put them over the bright diagonal on the jobseeker backgrounds:
+     mean luminance 182-204 of 255 there, peaking at pure white, so plain white text has
+     nothing to sit against. A tight dark halo restores the edge, a softer one underneath
+     gives it weight. Static filter, not animated. */
+  .l-telegram,.l-phone{filter:drop-shadow(0 0 1px rgba(0,0,0,.9))
+    drop-shadow(0 0 2px rgba(0,0,0,.65)) drop-shadow(0 1px 3px rgba(0,0,0,.45))}
 ${rules.map((r) => '  ' + r).join('\n')}
 ${frames.map((f) => '  ' + f).join('\n')}
   /* backup.sh loads ?frame=end to screenshot the resting frame. */
@@ -114,7 +168,7 @@ ${imgs.join('\n')}
 </div>
 <script>
   // Ad servers rewrite this exact literal. Global var, first script, one string.
-  var clickTag = "${CLICK_URL}";
+  var clickTag = "${CLICK[slug.split('-')[0]]}";
 </script>
 <script>
   document.getElementById("banner").addEventListener("click", function () {
@@ -126,5 +180,5 @@ ${imgs.join('\n')}
 `;
 
   writeFileSync(`${dir}/index.html`, html);
-  console.log(`${dir.padEnd(28)} ${scene.layers.length} layers  bgPan=${scene.bgPan}  "${headline.slice(0, 34)}"`);
+  console.log(`${dir.padEnd(28)} ${layers.length} layers  bgPan=${scene.bgPan}  "${headline.slice(0, 34)}"`);
 }

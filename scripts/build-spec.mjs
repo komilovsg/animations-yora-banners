@@ -102,12 +102,24 @@ for (const s of SCENES) {
 // One batched SVG render for every layer across all six scenes.
 mkdirSync('refs/svg', { recursive: true });
 const ids = [...exportIds.keys()];
-const res = await fetch(
-  `https://api.figma.com/v1/images/${KEY}?ids=${ids.join(',')}&format=svg&svg_outline_text=true`,
-  { headers: { 'X-Figma-Token': TOKEN } }
-);
-if (!res.ok) throw new Error(`images svg -> ${res.status} ${await res.text()}`);
-const { images } = await res.json();
+// Only call Figma for layers we do not already have on disk. The render endpoint
+// rate-limits hard, and a rerun that just re-derives the spec should not need it at all.
+const missing = [...exportIds].filter(([, file]) => !existsSync(`refs/svg/${file}`));
+let images = {};
+if (missing.length) {
+  const url = `https://api.figma.com/v1/images/${KEY}` +
+    `?ids=${missing.map(([id]) => id).join(',')}&format=svg&svg_outline_text=true`;
+  let res;
+  for (let attempt = 0; attempt < 5; attempt++) {
+    res = await fetch(url, { headers: { 'X-Figma-Token': TOKEN } });
+    if (res.status !== 429) break;
+    const wait = 20_000 * (attempt + 1);
+    console.log(`  rate limited, retrying in ${wait / 1000}s`);
+    await new Promise((r) => setTimeout(r, wait));
+  }
+  if (!res.ok) throw new Error(`images svg -> ${res.status} ${await res.text()}`);
+  ({ images } = await res.json());
+}
 
 let total = 0;
 for (const [id, file] of exportIds) {
