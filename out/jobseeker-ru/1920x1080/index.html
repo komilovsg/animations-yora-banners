@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="ad.size" content="width=1920,height=1080">
+<title>Yora.tj 1920x1080 — jobseeker-ru</title>
+<!--
+  Rebuilt from the two Figma keyframes of this scene: layers park off-canvas, then slide
+  to rest, staggered top to bottom.
+  Text ships as outlined SVG — the comp uses Loos Var, which is not licensed to us.
+  Clock: entrances 0.15-1.8s, end frame held ~3.2s, 3 plays = 15s.
+-->
+<style>
+  :root{--w:1920px;--h:1080px;--cycle:5s;--plays:3}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:var(--w);height:var(--h);overflow:hidden;background:#7b3ff2}
+  #banner{position:relative;width:var(--w);height:var(--h);overflow:hidden;
+    cursor:pointer;user-select:none;background:#7b3ff2}
+  /* Google wants a visible edge, but a border on #banner shifts every absolutely
+     positioned layer 1px in from the Figma coordinates. Draw it over the top instead. */
+  #banner::after{content:"";position:absolute;inset:0;pointer-events:none;
+    border:1px solid rgba(0,0,0,.15)}
+  .bg{position:absolute;left:0;top:0;width:1920px;height:1080px;will-change:transform}
+  .l{position:absolute;will-change:transform;transform:translateZ(0)}
+
+  .l-logo{left:846.6px;top:230.7px;width:227px;height:75px;--dx:1073.4px;--dy:0px;animation:k-logo var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  .l-headline{left:684px;top:354px;width:552px;height:35px;--dx:-1236px;--dy:0px;animation:k-headline var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  .l-subline{left:778px;top:419.2px;width:364px;height:31px;--dx:-1142px;--dy:0px;animation:k-subline var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  .l-cta{left:746.5px;top:494.6px;width:427px;height:71px;--dx:-1173.5px;--dy:0px;animation:k-cta var(--cycle) var(--plays) both cubic-bezier(.34,1.56,.64,1)}
+  .l-telegram{left:876.3px;top:609.81px;width:167.4px;height:36.45px;--dx:1043.7px;--dy:0px;animation:k-telegram var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  .l-phone{left:798px;top:650.26px;width:324px;height:27px;--dx:1122px;--dy:0px;animation:k-phone var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  @keyframes k-logo{0%,3%{transform:translate3d(var(--dx),var(--dy),0)}20%,100%{transform:translate3d(0,0,0)}}
+  @keyframes k-headline{0%,7%{transform:translate3d(var(--dx),var(--dy),0)}24%,100%{transform:translate3d(0,0,0)}}
+  @keyframes k-subline{0%,11%{transform:translate3d(var(--dx),var(--dy),0)}28%,100%{transform:translate3d(0,0,0)}}
+  @keyframes k-cta{0%,15%{transform:translate3d(var(--dx),var(--dy),0)}35%,100%{transform:translate3d(0,0,0)}}
+  @keyframes k-telegram{0%,19%{transform:translate3d(var(--dx),var(--dy),0)}36%,100%{transform:translate3d(0,0,0)}}
+  @keyframes k-phone{0%,23%{transform:translate3d(var(--dx),var(--dy),0)}40%,100%{transform:translate3d(0,0,0)}}
+  /* backup.sh loads ?frame=end to screenshot the resting frame. */
+  .end .bg,.end .l{animation:none!important}
+  .end .bg{transform:translate3d(var(--pan,0),0,0)}
+  .end .l{transform:translate3d(0,0,0)}
+  @media (prefers-reduced-motion:reduce){
+    .bg,.l{animation:none!important}
+    .bg{transform:translate3d(var(--pan,0),0,0)}
+    .l{transform:translate3d(0,0,0)}
+  }
+</style>
+<script>
+  // Applied before paint so the end-frame screenshot never catches the entrance.
+  if (location.search.indexOf("frame=end") > -1) document.documentElement.className = "end";
+</script>
+</head>
+<body>
+<div id="banner" role="link" aria-label="Yora.tj — Yora.tj">
+  <img class="bg" src="assets/bg.jpg" alt="">
+  <img class="l l-logo" src="assets/logo.svg" alt="">
+  <img class="l l-headline" src="assets/headline.svg" alt="">
+  <img class="l l-subline" src="assets/subline.svg" alt="">
+  <img class="l l-cta" src="assets/cta.svg" alt="">
+  <img class="l l-telegram" src="assets/telegram.svg" alt="">
+  <img class="l l-phone" src="assets/phone.svg" alt="">
+</div>
+<script>
+  // Ad servers rewrite this exact literal. Global var, first script, one string.
+  var clickTag = "https://yora.tj/ru/vacancies?currency_id=2&page=1";
+</script>
+<script>
+  document.getElementById("banner").addEventListener("click", function () {
+    window.open(clickTag, "_blank");
+  });
+</script>
+</body>
+</html>

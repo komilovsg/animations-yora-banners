@@ -1,50 +1,59 @@
 #!/usr/bin/env node
-// Rebuild each scene's 160x600 background from the single 1920x1080 Figma source.
+// Cut every creative's background out of the single 1920x1080 Figma source.
 //
-// Every background is that one image, but placed three different ways across the set, and
-// absoluteBoundingBox is a trap for two of them:
+// One image, but placed differently in almost every frame, and absoluteBoundingBox lies
+// for two of the cases:
 //
-//   scenes 1-2  axis-aligned, node 1182x665, FILL.
-//   scenes 3-4  node 1782x1002 ROTATED 14.1deg. Its bounding box is 1972x1406, which is the
-//               box of the rotated rect, not the rect — sizing the image to the box shears
-//               the whole background and drops the diagonal light streaks out of place.
-//   scenes 5-6  axis-aligned, node 1763x992, STRETCH with an imageTransform nudge.
+//   FILL     cover-fit, aspect preserved, centred inside the node box.
+//   STRETCH  node filled edge to edge, then imageTransform slides the image inside it.
+//   rotated  some nodes sit at 14.1deg. Their bounding box is the box of the rotated
+//            rect, not the rect — sizing the image to the box shears the whole background
+//            and drags the diagonal light streaks out of place. Use size + rotation.
 //
-// Every node's aspect is 1.777, same as the source, so FILL/cover crops nothing.
-// Scene 4 also pans its background 30px during the animation, so its slice is cut wider and
-// the extra width is travelled with a transform at runtime.
+// Two extra jobs on top of the straight crop:
+//   * A frame that pans its background during the animation gets a wider slice, and the
+//     extra width is travelled with a transform at runtime.
+//   * The three sections drawn 20px narrower than the size they are named after are cut
+//     20px wider here, split evenly, so the rebuild gains margin instead of scaling.
 import { readFileSync, mkdirSync } from 'node:fs';
 import sharp from 'sharp';
 
-const W = 160, H = 600, SCALE = 2; // @2x for retina
+// @2x is right for the small formats a phone shows at device-pixel-ratio 2. Past ~600px
+// the creative is already large on screen and doubling it only spends the weight budget —
+// a 1920x1080 background at @2x is a 3840px JPEG nobody sees the detail of.
+const scaleFor = (w, h) => (Math.max(w, h) <= 600 ? 2 : 1);
 const SRC = 'refs/bg-source.png';
-const nodes = JSON.parse(readFileSync('refs/nodes.json', 'utf8')).nodes;
+const spec = JSON.parse(readFileSync('refs/spec.json', 'utf8'));
 
-const SCENES = [
-  { id: 1, from: 'Frame 2136137190', to: 'Frame 2136137191' },
-  { id: 2, from: 'Frame 2136137192', to: 'Frame 2136137193' },
-  { id: 3, from: 'Frame 2136137194', to: 'Frame 2136137198' },
-  { id: 4, from: 'Frame 2136137197', to: 'Frame 2136137199' },
-  { id: 5, from: 'Frame 2136137200', to: 'Frame 2136137201' },
-  { id: 6, from: 'Frame 2136137202', to: 'Frame 2136137203' },
-];
+// Figma does not document which way imageTransform's translation points. Measured against
+// the reference render: -1 lands the 160x600 brand frames at 6% residual, +1 at 16%.
+const SHIFT_SIGN = -1;
 
-const frame = (name) => Object.values(nodes).find((v) => v.document.name === name).document;
-const bgOf = (name) => {
-  const f = frame(name);
-  const n = f.children.find((c) => c.name.startsWith('youra_logo'));
-  const o = f.absoluteBoundingBox, b = n.absoluteBoundingBox;
+const nodeCache = new Map();
+const framesOf = (file) => {
+  if (!nodeCache.has(file)) {
+    const byId = new Map();
+    for (const v of Object.values(JSON.parse(readFileSync(file, 'utf8')).nodes)) byId.set(v.document.id, v.document);
+    nodeCache.set(file, byId);
+  }
+  return nodeCache.get(file);
+};
+
+const bgOf = (frame) => {
+  const n = frame.children.find((c) => c.name.startsWith('youra_logo'));
+  const o = frame.absoluteBoundingBox, b = n.absoluteBoundingBox;
   return {
-    node: n,
-    bboxX: b.x - o.x, bboxY: b.y - o.y,          // rotated box, relative to the frame
-    w: n.size.x, h: n.size.y,                    // the rect's own size, pre-rotation
+    bboxX: b.x - o.x, bboxY: b.y - o.y,
+    w: n.size.x, h: n.size.y,
     deg: (n.rotation ?? 0) * 180 / Math.PI,
     fill: (n.fills ?? []).find((x) => x.imageRef),
   };
 };
 
-// Paint the image into the node box, then rotate the box the way Figma does.
-async function placed(bg) {
+const meta = await sharp(SRC).metadata();
+
+// Paint the source into the node box the way Figma does, then rotate the box.
+async function placed(bg, SCALE) {
   const nodeW = Math.round(bg.w * SCALE), nodeH = Math.round(bg.h * SCALE);
   const t = bg.fill.imageTransform;
 
@@ -52,14 +61,12 @@ async function placed(bg) {
   if (bg.fill.scaleMode === 'FILL' || !t) {
     buf = await sharp(SRC).resize(nodeW, nodeH, { fit: 'cover', position: 'centre' }).png().toBuffer();
   } else {
-    // STRETCH + crop transform: the image is stretched over the node, then slid by tx/ty
-    // (fractions of the node box). Only the sign is convention; SHIFT_SIGN pins it.
     const drawW = Math.round(nodeW / t[0][0]), drawH = Math.round(nodeH / t[1][1]);
-    const dx = Math.round(SHIFT_SIGN * t[0][2] * drawW), dy = Math.round(SHIFT_SIGN * t[1][2] * drawH);
     buf = await sharp({ create: { width: nodeW, height: nodeH, channels: 3, background: '#000' } })
       .composite([{
         input: await sharp(SRC).resize(drawW, drawH, { fit: 'fill' }).png().toBuffer(),
-        left: dx, top: dy,
+        left: Math.round(SHIFT_SIGN * t[0][2] * drawW),
+        top: Math.round(SHIFT_SIGN * t[1][2] * drawH),
       }])
       .png().toBuffer();
   }
@@ -70,34 +77,82 @@ async function placed(bg) {
   return { buf: rot, w: m.width, h: m.height };
 }
 
-// Figma does not document which way imageTransform's translation points. Measured against
-// the reference render: -1 lands scenes 5-6 at 6% residual, +1 at 16%, dropping it at 11%.
-const SHIFT_SIGN = -1;
-
 mkdirSync('refs/bg', { recursive: true });
+console.log(`source ${meta.width}x${meta.height}`);
 
-for (const s of SCENES) {
-  const a = bgOf(s.from), b = bgOf(s.to);
-  const img = await placed(b);                     // the resting frame defines the look
+// A derived size has no frame in the comp, so there is no node placement to follow. Reuse
+// the placement of the same message at a comped size and re-cut the window: same artwork,
+// same focal point, framed for the new canvas. Scale the placement up first when the
+// target is larger than the reference node.
+const reference = new Map();   // message -> { bg, windowCentre }
 
-  const pan = Math.round(b.bboxX - a.bboxX);       // background travel over the animation
-  const sliceW = W + Math.abs(pan);
-  // Start from whichever end sits further left so the whole travelled band is covered.
-  const left = Math.round(-Math.max(a.bboxX, b.bboxX) * SCALE);
-  const top = Math.round(-a.bboxY * SCALE);
+for (const s of spec) {
+  if (s.derived) continue;
+  const byId = framesOf(s.nodes);
+  const a = bgOf(byId.get(s.fromId));
+  if (!reference.has(s.message) || s.w * s.h > reference.get(s.message).area) {
+    reference.set(s.message, {
+      area: s.w * s.h,
+      bg: a,
+      cx: -a.bboxX + s.w / 2,
+      cy: -a.bboxY + s.h / 2,
+    });
+  }
+}
 
-  if (left < 0 || top < 0 || left + sliceW * SCALE > img.w || top + H * SCALE > img.h) {
-    throw new Error(`scene${s.id}: window ${left},${top} ${sliceW * SCALE}x${H * SCALE} outside ${img.w}x${img.h}`);
+for (const s of spec) {
+  const SCALE = scaleFor(s.w, s.h);
+
+  if (s.derived) {
+    const ref = reference.get(s.message);
+    if (!ref) { console.warn(`  ! ${s.stem}: no reference artwork for "${s.message}"`); continue; }
+
+    // Grow the node until the placed image can hold the requested window.
+    const need = Math.max((s.w * SCALE) / (ref.bg.w * SCALE), (s.h * SCALE) / (ref.bg.h * SCALE), 1);
+    const grown = { ...ref.bg, w: ref.bg.w * need, h: ref.bg.h * need };
+    const img = await placed(grown, SCALE);
+
+    const cx = ref.cx * need * SCALE * (grown.deg ? 1 : 1);
+    const cy = ref.cy * need * SCALE;
+    const left = Math.min(Math.max(0, Math.round(cx - (s.w * SCALE) / 2)), img.w - s.w * SCALE);
+    const top = Math.min(Math.max(0, Math.round(cy - (s.h * SCALE) / 2)), img.h - s.h * SCALE);
+
+    const info = await sharp(img.buf)
+      .extract({ left, top, width: s.w * SCALE, height: s.h * SCALE })
+      .jpeg({ quality: s.w * s.h > 400_000 ? 68 : 80, mozjpeg: true, chromaSubsampling: '4:4:4' })
+      .toFile(`refs/bg/${s.stem}.jpg`);
+    console.log(`${s.stem.padEnd(28)} derived from ${s.message} ×${need.toFixed(2)}  ${(info.size / 1024).toFixed(0)} KB`);
+    continue;
   }
 
-  const out = `refs/bg/scene${s.id}.jpg`;
+  const byId = framesOf(s.nodes);
+  const a = bgOf(byId.get(s.fromId)), b = bgOf(byId.get(s.toId));
+  const img = await placed(b, SCALE);                // the resting frame defines the look
+
+  const pan = Math.round(b.bboxX - a.bboxX);
+  const padX = (s.w - s.drawnW) / 2;                 // widening for the renamed sections
+  const padY = (s.h - s.drawnH) / 2;
+  const sliceW = s.w + Math.abs(pan);
+
+  // Start from whichever end sits further left so the whole travelled band is covered.
+  let left = Math.round((-Math.max(a.bboxX, b.bboxX) - padX) * SCALE);
+  let top = Math.round((-a.bboxY - padY) * SCALE);
+  const wantW = sliceW * SCALE, wantH = s.h * SCALE;
+
+  // The source is far bigger than any frame, but a widened crop can still run off an edge.
+  const clamped = [Math.min(Math.max(0, left), img.w - wantW), Math.min(Math.max(0, top), img.h - wantH)];
+  if (clamped[0] !== left || clamped[1] !== top) {
+    console.warn(`  ${s.stem}: window clamped ${left},${top} -> ${clamped[0]},${clamped[1]}`);
+    [left, top] = clamped;
+  }
+
   const info = await sharp(img.buf)
-    .extract({ left, top, width: sliceW * SCALE, height: H * SCALE })
+    .extract({ left, top, width: wantW, height: wantH })
     .jpeg({ quality: 80, mozjpeg: true, chromaSubsampling: '4:4:4' })
-    .toFile(out);
+    .toFile(`refs/bg/${s.stem}.jpg`);
 
   console.log(
-    `scene${s.id}  ${b.fill.scaleMode.padEnd(7)} node ${Math.round(b.w)}x${Math.round(b.h)} rot ${b.deg.toFixed(1)}deg` +
-    ` -> ${img.w / SCALE}x${img.h / SCALE}  window ${left / SCALE},${top / SCALE}  pan=${pan}  ${(info.size / 1024).toFixed(0)} KB`
+    `${s.stem.padEnd(26)} ${b.fill.scaleMode.padEnd(7)} rot ${b.deg.toFixed(1).padStart(5)}deg  ` +
+    `slice ${sliceW}x${s.h}${pan ? ` pan ${pan}` : ''}${padX ? ` +${padX * 2}w` : ''}  ${(info.size / 1024).toFixed(0)} KB`
   );
 }

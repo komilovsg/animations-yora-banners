@@ -1,44 +1,58 @@
 #!/usr/bin/env node
 // Split the one-line contacts strip into two stackable layers: Telegram handle, phone.
 //
-// The comp draws them as "@weyora | +992 553 06 2222" on a single line, and the client
-// wants them stacked and larger. Rather than ask Figma to render each TEXT node on its own
-// (the render endpoint rate-limits hard, and the comp must not be edited), re-wrap the
-// already-exported strip twice with a cropped viewBox — the glyph outlines are the same
-// vectors, just windowed. Then rewrite spec.json so the contacts layer becomes two.
+// The comp draws them as "@weyora | +992 553 06 2222" on a single line; the brief wants
+// them stacked and larger. Rather than ask Figma to render each TEXT node on its own —
+// the render endpoint rate-limits hard, and the comp must not be edited — re-wrap the
+// already-exported strip twice with a cropped viewBox. Same vectors, windowed.
 //
+// Idempotent: rewrites spec.json in place, and does nothing to a creative already split.
 // Run after build-spec.mjs, before build-banners.mjs.
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 
-const nodes = JSON.parse(readFileSync('refs/nodes.json', 'utf8')).nodes;
 const spec = JSON.parse(readFileSync('refs/spec.json', 'utf8'));
-
-const TO_FRAME = { 1: 'Frame 2136137191', 2: 'Frame 2136137193', 4: 'Frame 2136137199', 5: 'Frame 2136137201', 6: 'Frame 2136137203' };
 const bounds = (n) => n.absoluteRenderBounds ?? n.absoluteBoundingBox;
+
+const cache = new Map();
+const frameById = (file, id) => {
+  if (!cache.has(file)) {
+    const byId = new Map();
+    for (const v of Object.values(JSON.parse(readFileSync(file, 'utf8')).nodes)) byId.set(v.document.id, v.document);
+    cache.set(file, byId);
+  }
+  return cache.get(file).get(id);
+};
+
+let done = 0, waiting = 0;
 
 for (const scene of spec) {
   const idx = scene.layers.findIndex((l) => l.role === 'contacts');
-  if (idx === -1) continue;
+  if (idx === -1) continue;                                   // already split, or none
 
-  const frame = Object.values(nodes).find((v) => v.document.name === TO_FRAME[scene.id]).document;
-  const strip = frame.children.find((c) => c.name === 'Frame 2136137192');
+  const contacts = scene.layers[idx];
+  if (!existsSync(`refs/svg/${contacts.svg}`)) { waiting++; continue; }
+
+  const frame = frameById(scene.nodes, scene.toId);
+  const strip = frame.children.find((c) => /@weyora|\+992/.test(
+    (function t(n, a = []) { if (n.characters) a.push(n.characters); for (const k of n.children ?? []) t(k, a); return a; })(c).join(' ')
+  ));
   const p = bounds(strip);
-  const lines = strip.children.filter((c) => c.type === 'TEXT').map((c) => bounds(c));
+  const lines = strip.children.filter((c) => c.type === 'TEXT');
+  if (lines.length !== 2) { console.warn(`  ! ${scene.stem}: ${lines.length} text lines in the strip`); continue; }
 
   // One shared vertical band for both crops, so the two lines keep identical glyph scale
   // (the handle has a descender, the number does not).
-  const top = Math.min(...lines.map((l) => l.y)) - p.y;
-  const bottom = Math.max(...lines.map((l) => l.y + l.height)) - p.y;
-  const bandH = bottom - top;
+  const lb = lines.map(bounds);
+  const top = Math.min(...lb.map((l) => l.y)) - p.y;
+  const bandH = Math.max(...lb.map((l) => l.y + l.height)) - p.y - top;
 
-  const svg = readFileSync(`refs/svg/${scene.layers[idx].svg}`, 'utf8');
+  const svg = readFileSync(`refs/svg/${contacts.svg}`, 'utf8');
   const inner = svg.replace(/^[\s\S]*?<svg[^>]*>/, '').replace(/<\/svg>\s*$/, '');
 
-  const contacts = scene.layers[idx];
   const made = ['telegram', 'phone'].map((role, k) => {
-    const b = lines[k];
+    const b = lb[k];
     const x = b.x - p.x;
-    const file = `scene${scene.id}-${role}.svg`;
+    const file = `${scene.stem}-${role}.svg`;
     writeFileSync(
       `refs/svg/${file}`,
       `<svg xmlns="http://www.w3.org/2000/svg" width="${b.width.toFixed(2)}" ` +
@@ -46,7 +60,7 @@ for (const scene of spec) {
       `viewBox="${x.toFixed(2)} ${top.toFixed(2)} ${b.width.toFixed(2)} ${bandH.toFixed(2)}">${inner}</svg>`
     );
     return {
-      role, svg: file, text: strip.children.filter((c) => c.type === 'TEXT')[k].characters,
+      role, svg: file, text: lines[k].characters,
       x: +(contacts.x + x).toFixed(1), y: +(contacts.y + top).toFixed(1),
       w: +b.width.toFixed(1), h: +bandH.toFixed(1),
       dx: contacts.dx, dy: contacts.dy,
@@ -56,9 +70,8 @@ for (const scene of spec) {
   });
 
   scene.layers.splice(idx, 1, ...made);
-  console.log(`scene${scene.id}  band ${top.toFixed(1)}..${bottom.toFixed(1)}  ` +
-    made.map((m) => `${m.role} ${m.svgW}x${m.svgH}`).join('  '));
+  done++;
 }
 
 writeFileSync('refs/spec.json', JSON.stringify(spec, null, 2));
-console.log('refs/spec.json updated.');
+console.log(`split ${done} contact strips` + (waiting ? `, ${waiting} waiting on renders` : ''));

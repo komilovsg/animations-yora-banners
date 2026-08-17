@@ -2,68 +2,1458 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<title>Yora.tj — 160x600</title>
+<title>Yora.tj — баннеры</title>
 <style>
   :root{color-scheme:dark}
   body{margin:0;padding:28px;background:#0e0e12;color:#e8e6f0;
-    font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-  header{display:flex;align-items:baseline;gap:16px;margin-bottom:22px;flex-wrap:wrap}
-  h1{margin:0;font-size:17px;font-weight:650}
+    font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  header{display:flex;align-items:baseline;gap:16px;margin-bottom:8px;flex-wrap:wrap}
+  h1{margin:0;font-size:18px;font-weight:650;letter-spacing:-.01em}
   .hint{color:#8b8798}
   button{font:inherit;padding:6px 14px;border-radius:999px;cursor:pointer;
     border:1px solid #3a3550;background:#1b1826;color:#e8e6f0}
   button:hover{background:#252036}
-  .row{display:flex;gap:22px;flex-wrap:wrap}
+  section{margin-top:34px}
+  h2{margin:0 0 14px;font-size:13px;font-weight:650;letter-spacing:.06em;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#c9c3dd;
+    display:flex;align-items:baseline;gap:10px;
+    border-bottom:1px solid #262133;padding-bottom:8px}
+  h2 span{color:#7a7392;font-weight:400;letter-spacing:0}
+  .row{display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start}
   figure{margin:0}
-  iframe{width:160px;height:600px;border:0;display:block;background:#7b3ff2}
-  figcaption{margin-top:9px;font-size:12px;color:#8b8798;width:160px}
+  /* The stage is sized in CSS so a lazy iframe still reserves its slot. */
+  .stage{background:#7b3ff2;overflow:hidden}
+  iframe{border:0;display:block}
+  figcaption{margin-top:8px;font-size:12px;color:#8b8798;max-width:340px}
   figcaption b{display:block;color:#e8e6f0;font-weight:600}
-  figcaption a{display:block;margin-top:4px;color:#9d7bff;text-decoration:none;
+  figcaption a{color:#9d7bff;text-decoration:none;
     font:11px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-all}
   figcaption a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
 <header>
-  <h1>Yora.tj — 6 креативов 160×600</h1>
+  <h1>Yora.tj — 144 креативов, 24 размеров</h1>
   <span class="hint">анимация 5 с × 3 прохода, дальше стоп на CTA-кадре</span>
   <button id="replay">Проиграть заново</button>
 </header>
-<div class="row" id="row"></div>
+    <section>
+      <h2>160x600<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:160px;height:600px">
+          <iframe src="out/employer-ru/160x600/index.html" width="160" height="600" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/160x600/index.html" target="_blank">employer-ru/160x600/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:160px;height:600px">
+          <iframe src="out/employer-tj/160x600/index.html" width="160" height="600" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/160x600/index.html" target="_blank">employer-tj/160x600/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:160px;height:600px">
+          <iframe src="out/jobseeker-ru/160x600/index.html" width="160" height="600" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/160x600/index.html" target="_blank">jobseeker-ru/160x600/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:160px;height:600px">
+          <iframe src="out/jobseeker-tj/160x600/index.html" width="160" height="600" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/160x600/index.html" target="_blank">jobseeker-tj/160x600/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:160px;height:600px">
+          <iframe src="out/brand-ru/160x600/index.html" width="160" height="600" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/160x600/index.html" target="_blank">brand-ru/160x600/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:160px;height:600px">
+          <iframe src="out/brand-tj/160x600/index.html" width="160" height="600" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/160x600/index.html" target="_blank">brand-tj/160x600/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>240x600<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:240px;height:600px">
+          <iframe src="out/employer-ru/240x600/index.html" width="240" height="600" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/240x600/index.html" target="_blank">employer-ru/240x600/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:240px;height:600px">
+          <iframe src="out/employer-tj/240x600/index.html" width="240" height="600" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/240x600/index.html" target="_blank">employer-tj/240x600/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:240px;height:600px">
+          <iframe src="out/jobseeker-ru/240x600/index.html" width="240" height="600" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/240x600/index.html" target="_blank">jobseeker-ru/240x600/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:240px;height:600px">
+          <iframe src="out/jobseeker-tj/240x600/index.html" width="240" height="600" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/240x600/index.html" target="_blank">jobseeker-tj/240x600/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:240px;height:600px">
+          <iframe src="out/brand-ru/240x600/index.html" width="240" height="600" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/240x600/index.html" target="_blank">brand-ru/240x600/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:240px;height:600px">
+          <iframe src="out/brand-tj/240x600/index.html" width="240" height="600" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/240x600/index.html" target="_blank">brand-tj/240x600/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>300x600<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:300px;height:600px">
+          <iframe src="out/employer-ru/300x600/index.html" width="300" height="600" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/300x600/index.html" target="_blank">employer-ru/300x600/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:600px">
+          <iframe src="out/employer-tj/300x600/index.html" width="300" height="600" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/300x600/index.html" target="_blank">employer-tj/300x600/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:600px">
+          <iframe src="out/jobseeker-ru/300x600/index.html" width="300" height="600" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/300x600/index.html" target="_blank">jobseeker-ru/300x600/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:600px">
+          <iframe src="out/jobseeker-tj/300x600/index.html" width="300" height="600" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/300x600/index.html" target="_blank">jobseeker-tj/300x600/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:600px">
+          <iframe src="out/brand-ru/300x600/index.html" width="300" height="600" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/300x600/index.html" target="_blank">brand-ru/300x600/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:600px">
+          <iframe src="out/brand-tj/300x600/index.html" width="300" height="600" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/300x600/index.html" target="_blank">brand-tj/300x600/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>1080x1920<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:1080px;height:1920px">
+          <iframe src="out/employer-ru/1080x1920/index.html" width="1080" height="1920" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/1080x1920/index.html" target="_blank">employer-ru/1080x1920/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1080px;height:1920px">
+          <iframe src="out/employer-tj/1080x1920/index.html" width="1080" height="1920" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/1080x1920/index.html" target="_blank">employer-tj/1080x1920/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1080px;height:1920px">
+          <iframe src="out/jobseeker-ru/1080x1920/index.html" width="1080" height="1920" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/1080x1920/index.html" target="_blank">jobseeker-ru/1080x1920/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1080px;height:1920px">
+          <iframe src="out/jobseeker-tj/1080x1920/index.html" width="1080" height="1920" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/1080x1920/index.html" target="_blank">jobseeker-tj/1080x1920/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1080px;height:1920px">
+          <iframe src="out/brand-ru/1080x1920/index.html" width="1080" height="1920" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/1080x1920/index.html" target="_blank">brand-ru/1080x1920/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1080px;height:1920px">
+          <iframe src="out/brand-tj/1080x1920/index.html" width="1080" height="1920" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/1080x1920/index.html" target="_blank">brand-tj/1080x1920/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>300x500<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:300px;height:500px">
+          <iframe src="out/employer-ru/300x500/index.html" width="300" height="500" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/300x500/index.html" target="_blank">employer-ru/300x500/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:500px">
+          <iframe src="out/employer-tj/300x500/index.html" width="300" height="500" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/300x500/index.html" target="_blank">employer-tj/300x500/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:500px">
+          <iframe src="out/jobseeker-ru/300x500/index.html" width="300" height="500" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/300x500/index.html" target="_blank">jobseeker-ru/300x500/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:500px">
+          <iframe src="out/jobseeker-tj/300x500/index.html" width="300" height="500" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/300x500/index.html" target="_blank">jobseeker-tj/300x500/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:500px">
+          <iframe src="out/brand-ru/300x500/index.html" width="300" height="500" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/300x500/index.html" target="_blank">brand-ru/300x500/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:500px">
+          <iframe src="out/brand-tj/300x500/index.html" width="300" height="500" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/300x500/index.html" target="_blank">brand-tj/300x500/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>240x400<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:240px;height:400px">
+          <iframe src="out/employer-ru/240x400/index.html" width="240" height="400" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/240x400/index.html" target="_blank">employer-ru/240x400/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:240px;height:400px">
+          <iframe src="out/employer-tj/240x400/index.html" width="240" height="400" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/240x400/index.html" target="_blank">employer-tj/240x400/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:240px;height:400px">
+          <iframe src="out/jobseeker-ru/240x400/index.html" width="240" height="400" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/240x400/index.html" target="_blank">jobseeker-ru/240x400/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:240px;height:400px">
+          <iframe src="out/jobseeker-tj/240x400/index.html" width="240" height="400" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/240x400/index.html" target="_blank">jobseeker-tj/240x400/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:240px;height:400px">
+          <iframe src="out/brand-ru/240x400/index.html" width="240" height="400" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/240x400/index.html" target="_blank">brand-ru/240x400/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:240px;height:400px">
+          <iframe src="out/brand-tj/240x400/index.html" width="240" height="400" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/240x400/index.html" target="_blank">brand-tj/240x400/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>320x480<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:320px;height:480px">
+          <iframe src="out/employer-ru/320x480/index.html" width="320" height="480" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/320x480/index.html" target="_blank">employer-ru/320x480/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:320px;height:480px">
+          <iframe src="out/employer-tj/320x480/index.html" width="320" height="480" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/320x480/index.html" target="_blank">employer-tj/320x480/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:320px;height:480px">
+          <iframe src="out/jobseeker-ru/320x480/index.html" width="320" height="480" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/320x480/index.html" target="_blank">jobseeker-ru/320x480/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:320px;height:480px">
+          <iframe src="out/jobseeker-tj/320x480/index.html" width="320" height="480" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/320x480/index.html" target="_blank">jobseeker-tj/320x480/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:320px;height:480px">
+          <iframe src="out/brand-ru/320x480/index.html" width="320" height="480" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/320x480/index.html" target="_blank">brand-ru/320x480/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:320px;height:480px">
+          <iframe src="out/brand-tj/320x480/index.html" width="320" height="480" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/320x480/index.html" target="_blank">brand-tj/320x480/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>768x1024<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:768px;height:1024px">
+          <iframe src="out/employer-ru/768x1024/index.html" width="768" height="1024" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/768x1024/index.html" target="_blank">employer-ru/768x1024/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:768px;height:1024px">
+          <iframe src="out/employer-tj/768x1024/index.html" width="768" height="1024" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/768x1024/index.html" target="_blank">employer-tj/768x1024/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:768px;height:1024px">
+          <iframe src="out/jobseeker-ru/768x1024/index.html" width="768" height="1024" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/768x1024/index.html" target="_blank">jobseeker-ru/768x1024/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:768px;height:1024px">
+          <iframe src="out/jobseeker-tj/768x1024/index.html" width="768" height="1024" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/768x1024/index.html" target="_blank">jobseeker-tj/768x1024/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:768px;height:1024px">
+          <iframe src="out/brand-ru/768x1024/index.html" width="768" height="1024" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/768x1024/index.html" target="_blank">brand-ru/768x1024/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:768px;height:1024px">
+          <iframe src="out/brand-tj/768x1024/index.html" width="768" height="1024" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/768x1024/index.html" target="_blank">brand-tj/768x1024/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>1440x1800<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:1440px;height:1800px">
+          <iframe src="out/employer-ru/1440x1800/index.html" width="1440" height="1800" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/1440x1800/index.html" target="_blank">employer-ru/1440x1800/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1440px;height:1800px">
+          <iframe src="out/employer-tj/1440x1800/index.html" width="1440" height="1800" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/1440x1800/index.html" target="_blank">employer-tj/1440x1800/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1440px;height:1800px">
+          <iframe src="out/jobseeker-ru/1440x1800/index.html" width="1440" height="1800" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/1440x1800/index.html" target="_blank">jobseeker-ru/1440x1800/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1440px;height:1800px">
+          <iframe src="out/jobseeker-tj/1440x1800/index.html" width="1440" height="1800" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/1440x1800/index.html" target="_blank">jobseeker-tj/1440x1800/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1440px;height:1800px">
+          <iframe src="out/brand-ru/1440x1800/index.html" width="1440" height="1800" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/1440x1800/index.html" target="_blank">brand-ru/1440x1800/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1440px;height:1800px">
+          <iframe src="out/brand-tj/1440x1800/index.html" width="1440" height="1800" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/1440x1800/index.html" target="_blank">brand-tj/1440x1800/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>1080x1350<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:1080px;height:1350px">
+          <iframe src="out/employer-ru/1080x1350/index.html" width="1080" height="1350" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/1080x1350/index.html" target="_blank">employer-ru/1080x1350/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1080px;height:1350px">
+          <iframe src="out/employer-tj/1080x1350/index.html" width="1080" height="1350" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/1080x1350/index.html" target="_blank">employer-tj/1080x1350/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1080px;height:1350px">
+          <iframe src="out/jobseeker-ru/1080x1350/index.html" width="1080" height="1350" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/1080x1350/index.html" target="_blank">jobseeker-ru/1080x1350/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1080px;height:1350px">
+          <iframe src="out/jobseeker-tj/1080x1350/index.html" width="1080" height="1350" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/1080x1350/index.html" target="_blank">jobseeker-tj/1080x1350/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1080px;height:1350px">
+          <iframe src="out/brand-ru/1080x1350/index.html" width="1080" height="1350" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/1080x1350/index.html" target="_blank">brand-ru/1080x1350/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1080px;height:1350px">
+          <iframe src="out/brand-tj/1080x1350/index.html" width="1080" height="1350" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/1080x1350/index.html" target="_blank">brand-tj/1080x1350/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>1440x1440<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:1440px;height:1440px">
+          <iframe src="out/employer-ru/1440x1440/index.html" width="1440" height="1440" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/1440x1440/index.html" target="_blank">employer-ru/1440x1440/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1440px;height:1440px">
+          <iframe src="out/employer-tj/1440x1440/index.html" width="1440" height="1440" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/1440x1440/index.html" target="_blank">employer-tj/1440x1440/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1440px;height:1440px">
+          <iframe src="out/jobseeker-ru/1440x1440/index.html" width="1440" height="1440" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/1440x1440/index.html" target="_blank">jobseeker-ru/1440x1440/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1440px;height:1440px">
+          <iframe src="out/jobseeker-tj/1440x1440/index.html" width="1440" height="1440" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/1440x1440/index.html" target="_blank">jobseeker-tj/1440x1440/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1440px;height:1440px">
+          <iframe src="out/brand-ru/1440x1440/index.html" width="1440" height="1440" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/1440x1440/index.html" target="_blank">brand-ru/1440x1440/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1440px;height:1440px">
+          <iframe src="out/brand-tj/1440x1440/index.html" width="1440" height="1440" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/1440x1440/index.html" target="_blank">brand-tj/1440x1440/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>300x300<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:300px;height:300px">
+          <iframe src="out/employer-ru/300x300/index.html" width="300" height="300" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/300x300/index.html" target="_blank">employer-ru/300x300/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:300px">
+          <iframe src="out/employer-tj/300x300/index.html" width="300" height="300" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/300x300/index.html" target="_blank">employer-tj/300x300/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:300px">
+          <iframe src="out/jobseeker-ru/300x300/index.html" width="300" height="300" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/300x300/index.html" target="_blank">jobseeker-ru/300x300/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:300px">
+          <iframe src="out/jobseeker-tj/300x300/index.html" width="300" height="300" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/300x300/index.html" target="_blank">jobseeker-tj/300x300/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:300px">
+          <iframe src="out/brand-ru/300x300/index.html" width="300" height="300" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/300x300/index.html" target="_blank">brand-ru/300x300/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:300px">
+          <iframe src="out/brand-tj/300x300/index.html" width="300" height="300" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/300x300/index.html" target="_blank">brand-tj/300x300/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>336x280<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:336px;height:280px">
+          <iframe src="out/employer-ru/336x280/index.html" width="336" height="280" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/336x280/index.html" target="_blank">employer-ru/336x280/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:336px;height:280px">
+          <iframe src="out/employer-tj/336x280/index.html" width="336" height="280" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/336x280/index.html" target="_blank">employer-tj/336x280/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:336px;height:280px">
+          <iframe src="out/jobseeker-ru/336x280/index.html" width="336" height="280" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/336x280/index.html" target="_blank">jobseeker-ru/336x280/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:336px;height:280px">
+          <iframe src="out/jobseeker-tj/336x280/index.html" width="336" height="280" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/336x280/index.html" target="_blank">jobseeker-tj/336x280/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:336px;height:280px">
+          <iframe src="out/brand-ru/336x280/index.html" width="336" height="280" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/336x280/index.html" target="_blank">brand-ru/336x280/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:336px;height:280px">
+          <iframe src="out/brand-tj/336x280/index.html" width="336" height="280" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/336x280/index.html" target="_blank">brand-tj/336x280/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>300x250<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:300px;height:250px">
+          <iframe src="out/employer-ru/300x250/index.html" width="300" height="250" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/300x250/index.html" target="_blank">employer-ru/300x250/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:250px">
+          <iframe src="out/employer-tj/300x250/index.html" width="300" height="250" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/300x250/index.html" target="_blank">employer-tj/300x250/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:250px">
+          <iframe src="out/jobseeker-ru/300x250/index.html" width="300" height="250" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/300x250/index.html" target="_blank">jobseeker-ru/300x250/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:250px">
+          <iframe src="out/jobseeker-tj/300x250/index.html" width="300" height="250" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/300x250/index.html" target="_blank">jobseeker-tj/300x250/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:250px">
+          <iframe src="out/brand-ru/300x250/index.html" width="300" height="250" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/300x250/index.html" target="_blank">brand-ru/300x250/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:300px;height:250px">
+          <iframe src="out/brand-tj/300x250/index.html" width="300" height="250" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/300x250/index.html" target="_blank">brand-tj/300x250/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>1024x768<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:1024px;height:768px">
+          <iframe src="out/employer-ru/1024x768/index.html" width="1024" height="768" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/1024x768/index.html" target="_blank">employer-ru/1024x768/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1024px;height:768px">
+          <iframe src="out/employer-tj/1024x768/index.html" width="1024" height="768" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/1024x768/index.html" target="_blank">employer-tj/1024x768/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1024px;height:768px">
+          <iframe src="out/jobseeker-ru/1024x768/index.html" width="1024" height="768" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/1024x768/index.html" target="_blank">jobseeker-ru/1024x768/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1024px;height:768px">
+          <iframe src="out/jobseeker-tj/1024x768/index.html" width="1024" height="768" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/1024x768/index.html" target="_blank">jobseeker-tj/1024x768/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1024px;height:768px">
+          <iframe src="out/brand-ru/1024x768/index.html" width="1024" height="768" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/1024x768/index.html" target="_blank">brand-ru/1024x768/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1024px;height:768px">
+          <iframe src="out/brand-tj/1024x768/index.html" width="1024" height="768" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/1024x768/index.html" target="_blank">brand-tj/1024x768/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>480x320<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:480px;height:320px">
+          <iframe src="out/employer-ru/480x320/index.html" width="480" height="320" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/480x320/index.html" target="_blank">employer-ru/480x320/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:480px;height:320px">
+          <iframe src="out/employer-tj/480x320/index.html" width="480" height="320" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/480x320/index.html" target="_blank">employer-tj/480x320/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:480px;height:320px">
+          <iframe src="out/jobseeker-ru/480x320/index.html" width="480" height="320" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/480x320/index.html" target="_blank">jobseeker-ru/480x320/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:480px;height:320px">
+          <iframe src="out/jobseeker-tj/480x320/index.html" width="480" height="320" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/480x320/index.html" target="_blank">jobseeker-tj/480x320/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:480px;height:320px">
+          <iframe src="out/brand-ru/480x320/index.html" width="480" height="320" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/480x320/index.html" target="_blank">brand-ru/480x320/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:480px;height:320px">
+          <iframe src="out/brand-tj/480x320/index.html" width="480" height="320" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/480x320/index.html" target="_blank">brand-tj/480x320/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>1920x1080<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:1920px;height:1080px">
+          <iframe src="out/employer-ru/1920x1080/index.html" width="1920" height="1080" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/1920x1080/index.html" target="_blank">employer-ru/1920x1080/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1920px;height:1080px">
+          <iframe src="out/employer-tj/1920x1080/index.html" width="1920" height="1080" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/1920x1080/index.html" target="_blank">employer-tj/1920x1080/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1920px;height:1080px">
+          <iframe src="out/jobseeker-ru/1920x1080/index.html" width="1920" height="1080" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/1920x1080/index.html" target="_blank">jobseeker-ru/1920x1080/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1920px;height:1080px">
+          <iframe src="out/jobseeker-tj/1920x1080/index.html" width="1920" height="1080" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/1920x1080/index.html" target="_blank">jobseeker-tj/1920x1080/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1920px;height:1080px">
+          <iframe src="out/brand-ru/1920x1080/index.html" width="1920" height="1080" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/1920x1080/index.html" target="_blank">brand-ru/1920x1080/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1920px;height:1080px">
+          <iframe src="out/brand-tj/1920x1080/index.html" width="1920" height="1080" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/1920x1080/index.html" target="_blank">brand-tj/1920x1080/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>320x100<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:320px;height:100px">
+          <iframe src="out/employer-ru/320x100/index.html" width="320" height="100" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/320x100/index.html" target="_blank">employer-ru/320x100/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:320px;height:100px">
+          <iframe src="out/employer-tj/320x100/index.html" width="320" height="100" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/320x100/index.html" target="_blank">employer-tj/320x100/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:320px;height:100px">
+          <iframe src="out/jobseeker-ru/320x100/index.html" width="320" height="100" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/320x100/index.html" target="_blank">jobseeker-ru/320x100/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:320px;height:100px">
+          <iframe src="out/jobseeker-tj/320x100/index.html" width="320" height="100" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/320x100/index.html" target="_blank">jobseeker-tj/320x100/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:320px;height:100px">
+          <iframe src="out/brand-ru/320x100/index.html" width="320" height="100" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/320x100/index.html" target="_blank">brand-ru/320x100/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:320px;height:100px">
+          <iframe src="out/brand-tj/320x100/index.html" width="320" height="100" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/320x100/index.html" target="_blank">brand-tj/320x100/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>970x250<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:970px;height:250px">
+          <iframe src="out/employer-ru/970x250/index.html" width="970" height="250" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/970x250/index.html" target="_blank">employer-ru/970x250/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:970px;height:250px">
+          <iframe src="out/employer-tj/970x250/index.html" width="970" height="250" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/970x250/index.html" target="_blank">employer-tj/970x250/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:970px;height:250px">
+          <iframe src="out/jobseeker-ru/970x250/index.html" width="970" height="250" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/970x250/index.html" target="_blank">jobseeker-ru/970x250/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:970px;height:250px">
+          <iframe src="out/jobseeker-tj/970x250/index.html" width="970" height="250" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/970x250/index.html" target="_blank">jobseeker-tj/970x250/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:970px;height:250px">
+          <iframe src="out/brand-ru/970x250/index.html" width="970" height="250" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/970x250/index.html" target="_blank">brand-ru/970x250/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:970px;height:250px">
+          <iframe src="out/brand-tj/970x250/index.html" width="970" height="250" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/970x250/index.html" target="_blank">brand-tj/970x250/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>320x50<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:320px;height:50px">
+          <iframe src="out/employer-ru/320x50/index.html" width="320" height="50" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/320x50/index.html" target="_blank">employer-ru/320x50/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:320px;height:50px">
+          <iframe src="out/employer-tj/320x50/index.html" width="320" height="50" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/320x50/index.html" target="_blank">employer-tj/320x50/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:320px;height:50px">
+          <iframe src="out/jobseeker-ru/320x50/index.html" width="320" height="50" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/320x50/index.html" target="_blank">jobseeker-ru/320x50/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:320px;height:50px">
+          <iframe src="out/jobseeker-tj/320x50/index.html" width="320" height="50" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/320x50/index.html" target="_blank">jobseeker-tj/320x50/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:320px;height:50px">
+          <iframe src="out/brand-ru/320x50/index.html" width="320" height="50" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/320x50/index.html" target="_blank">brand-ru/320x50/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:320px;height:50px">
+          <iframe src="out/brand-tj/320x50/index.html" width="320" height="50" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/320x50/index.html" target="_blank">brand-tj/320x50/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>468x60<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:468px;height:60px">
+          <iframe src="out/employer-ru/468x60/index.html" width="468" height="60" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/468x60/index.html" target="_blank">employer-ru/468x60/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:468px;height:60px">
+          <iframe src="out/employer-tj/468x60/index.html" width="468" height="60" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/468x60/index.html" target="_blank">employer-tj/468x60/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:468px;height:60px">
+          <iframe src="out/jobseeker-ru/468x60/index.html" width="468" height="60" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/468x60/index.html" target="_blank">jobseeker-ru/468x60/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:468px;height:60px">
+          <iframe src="out/jobseeker-tj/468x60/index.html" width="468" height="60" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/468x60/index.html" target="_blank">jobseeker-tj/468x60/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:468px;height:60px">
+          <iframe src="out/brand-ru/468x60/index.html" width="468" height="60" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/468x60/index.html" target="_blank">brand-ru/468x60/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:468px;height:60px">
+          <iframe src="out/brand-tj/468x60/index.html" width="468" height="60" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/468x60/index.html" target="_blank">brand-tj/468x60/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>728x90<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:728px;height:90px">
+          <iframe src="out/employer-ru/728x90/index.html" width="728" height="90" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/728x90/index.html" target="_blank">employer-ru/728x90/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:728px;height:90px">
+          <iframe src="out/employer-tj/728x90/index.html" width="728" height="90" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/728x90/index.html" target="_blank">employer-tj/728x90/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:728px;height:90px">
+          <iframe src="out/jobseeker-ru/728x90/index.html" width="728" height="90" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/728x90/index.html" target="_blank">jobseeker-ru/728x90/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:728px;height:90px">
+          <iframe src="out/jobseeker-tj/728x90/index.html" width="728" height="90" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/728x90/index.html" target="_blank">jobseeker-tj/728x90/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:728px;height:90px">
+          <iframe src="out/brand-ru/728x90/index.html" width="728" height="90" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/728x90/index.html" target="_blank">brand-ru/728x90/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:728px;height:90px">
+          <iframe src="out/brand-tj/728x90/index.html" width="728" height="90" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/728x90/index.html" target="_blank">brand-tj/728x90/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>1000x120<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:1000px;height:120px">
+          <iframe src="out/employer-ru/1000x120/index.html" width="1000" height="120" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/1000x120/index.html" target="_blank">employer-ru/1000x120/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1000px;height:120px">
+          <iframe src="out/employer-tj/1000x120/index.html" width="1000" height="120" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/1000x120/index.html" target="_blank">employer-tj/1000x120/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1000px;height:120px">
+          <iframe src="out/jobseeker-ru/1000x120/index.html" width="1000" height="120" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/1000x120/index.html" target="_blank">jobseeker-ru/1000x120/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1000px;height:120px">
+          <iframe src="out/jobseeker-tj/1000x120/index.html" width="1000" height="120" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/1000x120/index.html" target="_blank">jobseeker-tj/1000x120/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1000px;height:120px">
+          <iframe src="out/brand-ru/1000x120/index.html" width="1000" height="120" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/1000x120/index.html" target="_blank">brand-ru/1000x120/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:1000px;height:120px">
+          <iframe src="out/brand-tj/1000x120/index.html" width="1000" height="120" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/1000x120/index.html" target="_blank">brand-tj/1000x120/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+    <section>
+      <h2>480x32<span>6 из 6</span></h2>
+      <div class="row">
+      <figure>
+        <div class="stage" style="width:480px;height:32px">
+          <iframe src="out/employer-ru/480x32/index.html" width="480" height="32" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · RU</b>
+          <a href="out/employer-ru/480x32/index.html" target="_blank">employer-ru/480x32/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:480px;height:32px">
+          <iframe src="out/employer-tj/480x32/index.html" width="480" height="32" title="Найдите своего сотрудника" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Работодателю · TJ</b>
+          <a href="out/employer-tj/480x32/index.html" target="_blank">employer-tj/480x32/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:480px;height:32px">
+          <iframe src="out/jobseeker-ru/480x32/index.html" width="480" height="32" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · RU</b>
+          <a href="out/jobseeker-ru/480x32/index.html" target="_blank">jobseeker-ru/480x32/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:480px;height:32px">
+          <iframe src="out/jobseeker-tj/480x32/index.html" width="480" height="32" title="У нас вакансия" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Соискателю · TJ</b>
+          <a href="out/jobseeker-tj/480x32/index.html" target="_blank">jobseeker-tj/480x32/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:480px;height:32px">
+          <iframe src="out/brand-ru/480x32/index.html" width="480" height="32" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · RU</b>
+          <a href="out/brand-ru/480x32/index.html" target="_blank">brand-ru/480x32/index.html</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="stage" style="width:480px;height:32px">
+          <iframe src="out/brand-tj/480x32/index.html" width="480" height="32" title="Вакансии по всему Таджикистану" loading="lazy"></iframe>
+        </div>
+        <figcaption>
+          <b>Имиджевый · TJ</b>
+          <a href="out/brand-tj/480x32/index.html" target="_blank">brand-tj/480x32/index.html</a>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
 <script>
-  const BANNERS = [
-    ['employer-ru',  'Работодателю', 'RU · Найдите своего сотрудника'],
-    ['employer-tj',  'Работодателю', 'TJ · Корманди худро пайдо кунед'],
-    ['jobseeker-ru', 'Соискателю',   'RU · У нас вакансия'],
-    ['jobseeker-tj', 'Соискателю',   'TJ · Мо ҷойи корӣ дорем'],
-    ['brand-ru',     'Имиджевый',    'RU · Вакансии по всему Таджикистану'],
-    ['brand-tj',     'Имиджевый',    'TJ · Ҷойҳои корӣ дар тамоми Тоҷикистон'],
-  ];
-
-  const row = document.getElementById('row');
-  for (const [slug, group, label] of BANNERS) {
-    const href = 'out/' + slug + '/160x600/index.html';
-
-    const fig = document.createElement('figure');
-    const frame = document.createElement('iframe');
-    frame.src = href;
-    frame.title = label;
-
-    const cap = document.createElement('figcaption');
-    const name = document.createElement('b');
-    name.textContent = group;
-    // Standalone address — this is what a placement actually gets, the iframe above
-    // is only for looking at all six side by side.
-    const link = document.createElement('a');
-    link.href = href;
-    link.target = '_blank';
-    link.textContent = href;
-
-    cap.append(name, label, link);
-    fig.append(frame, cap);
-    row.append(fig);
-  }
-
   document.getElementById('replay').addEventListener('click', () => {
     for (const f of document.querySelectorAll('iframe')) f.src = f.src;
   });

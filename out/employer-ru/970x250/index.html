@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="ad.size" content="width=970,height=250">
+<title>Yora.tj 970x250 — employer-ru</title>
+<!--
+  Rebuilt from the two Figma keyframes of this scene: layers park off-canvas, then slide
+  to rest, staggered top to bottom.
+  Text ships as outlined SVG — the comp uses Loos Var, which is not licensed to us.
+  Clock: entrances 0.15-1.8s, end frame held ~3.2s, 3 plays = 15s.
+-->
+<style>
+  :root{--w:970px;--h:250px;--cycle:5s;--plays:3}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:var(--w);height:var(--h);overflow:hidden;background:#7b3ff2}
+  #banner{position:relative;width:var(--w);height:var(--h);overflow:hidden;
+    cursor:pointer;user-select:none;background:#7b3ff2}
+  /* Google wants a visible edge, but a border on #banner shifts every absolutely
+     positioned layer 1px in from the Figma coordinates. Draw it over the top instead. */
+  #banner::after{content:"";position:absolute;inset:0;pointer-events:none;
+    border:1px solid rgba(0,0,0,.15)}
+  .bg{position:absolute;left:0;top:0;width:970px;height:250px;will-change:transform}
+  .l{position:absolute;will-change:transform;transform:translateZ(0)}
+  .scrim{position:absolute;pointer-events:none;left:408.14px;top:395.79px;
+    width:153.71px;height:57.62px;
+    background:radial-gradient(ellipse at center,rgba(0,0,0,0.50) 0%,rgba(0,0,0,0.28) 45%,rgba(0,0,0,0) 72%)}
+  .l-headline{left:202.3px;top:92.8px;width:463px;height:24px;--dx:-665.3px;--dy:0px;animation:k-headline var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  .l-logo{left:13px;top:107.7px;width:105px;height:35px;--dx:-118px;--dy:0px;animation:k-logo var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  .l-cta{left:750px;top:110px;width:207px;height:30px;--dx:220px;--dy:0px;animation:k-cta var(--cycle) var(--plays) both cubic-bezier(.34,1.56,.64,1)}
+  .l-subline{left:320.8px;top:123.8px;width:226px;height:14px;--dx:-546.8px;--dy:0px;animation:k-subline var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  .l-contactline{left:356.3px;top:146.2px;width:155px;height:11px;--dx:613.7px;--dy:0px;animation:k-contactline var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  .l-telegram{left:457.51px;top:410.88px;width:54.99px;height:11.72px;--dx:512.49px;--dy:0px;animation:k-telegram var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  .l-phone{left:431.63px;top:426.6px;width:106.74px;height:11.72px;--dx:538.37px;--dy:0px;animation:k-phone var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
+  @keyframes k-headline{0%,3%{transform:translate3d(var(--dx),var(--dy),0)}20%,100%{transform:translate3d(0,0,0)}}
+  @keyframes k-logo{0%,7%{transform:translate3d(var(--dx),var(--dy),0)}24%,100%{transform:translate3d(0,0,0)}}
+  @keyframes k-cta{0%,11%{transform:translate3d(var(--dx),var(--dy),0)}31%,100%{transform:translate3d(0,0,0)}}
+  @keyframes k-subline{0%,15%{transform:translate3d(var(--dx),var(--dy),0)}32%,100%{transform:translate3d(0,0,0)}}
+  @keyframes k-contactline{0%,19%{transform:translate3d(var(--dx),var(--dy),0)}36%,100%{transform:translate3d(0,0,0)}}
+  @keyframes k-telegram{0%,23%{transform:translate3d(var(--dx),var(--dy),0)}40%,100%{transform:translate3d(0,0,0)}}
+  @keyframes k-phone{0%,27%{transform:translate3d(var(--dx),var(--dy),0)}44%,100%{transform:translate3d(0,0,0)}}
+  /* backup.sh loads ?frame=end to screenshot the resting frame. */
+  .end .bg,.end .l{animation:none!important}
+  .end .bg{transform:translate3d(var(--pan,0),0,0)}
+  .end .l{transform:translate3d(0,0,0)}
+  @media (prefers-reduced-motion:reduce){
+    .bg,.l{animation:none!important}
+    .bg{transform:translate3d(var(--pan,0),0,0)}
+    .l{transform:translate3d(0,0,0)}
+  }
+</style>
+<script>
+  // Applied before paint so the end-frame screenshot never catches the entrance.
+  if (location.search.indexOf("frame=end") > -1) document.documentElement.className = "end";
+</script>
+</head>
+<body>
+<div id="banner" role="link" aria-label="Yora.tj — Yora.tj">
+  <img class="bg" src="assets/bg.jpg" alt="">
+  <div class="scrim"></div>
+  <img class="l l-headline" src="assets/headline.svg" alt="">
+  <img class="l l-logo" src="assets/logo.svg" alt="">
+  <img class="l l-cta" src="assets/cta.svg" alt="">
+  <img class="l l-subline" src="assets/subline.svg" alt="">
+  <img class="l l-contactline" src="assets/contactline.svg" alt="">
+  <img class="l l-telegram" src="assets/telegram.svg" alt="">
+  <img class="l l-phone" src="assets/phone.svg" alt="">
+</div>
+<script>
+  // Ad servers rewrite this exact literal. Global var, first script, one string.
+  var clickTag = "https://yora.tj/ru";
+</script>
+<script>
+  document.getElementById("banner").addEventListener("click", function () {
+    window.open(clickTag, "_blank");
+  });
+</script>
+</body>
+</html>
