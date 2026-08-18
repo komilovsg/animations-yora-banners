@@ -3186,31 +3186,77 @@
     "drawnW": 640,
     "drawnH": 360,
     "derived": true,
-    "static": true,
-    "family": "static 23% ink",
-    "k": 2.65,
+    "static": false,
+    "family": "stacked",
+    "k": 1.37,
     "bgPan": 0,
     "layers": [
       {
         "role": "logo",
-        "x": 258.4,
-        "y": 98.6,
-        "svgW": 123,
-        "svgH": 41,
-        "dx": 381.6,
+        "x": 268.6,
+        "y": 74.2,
+        "svgW": 103,
+        "svgH": 34,
+        "dx": 371.4,
         "dy": 0,
         "svg": "640x360-employer-ru-logo.svg",
         "nodeId": null
       },
       {
         "role": "headline",
-        "x": 76,
-        "y": 162.4,
-        "svgW": 488,
-        "svgH": 99,
-        "dx": -564,
+        "x": 92.5,
+        "y": 130.1,
+        "svgW": 455,
+        "svgH": 23,
+        "dx": -547.5,
         "dy": 0,
         "svg": "640x360-employer-ru-headline.svg",
+        "nodeId": null
+      },
+      {
+        "role": "subline",
+        "x": 209,
+        "y": 166.8,
+        "svgW": 222,
+        "svgH": 14,
+        "dx": -431,
+        "dy": 0,
+        "svg": "640x360-employer-ru-subline.svg",
+        "nodeId": null
+      },
+      {
+        "role": "cta",
+        "x": 218.5,
+        "y": 205.4,
+        "svgW": 203,
+        "svgH": 30,
+        "dx": -421.5,
+        "dy": 0,
+        "svg": "640x360-employer-ru-cta.svg",
+        "nodeId": null
+      },
+      {
+        "role": "telegram",
+        "x": 291.5,
+        "y": 257.4,
+        "svgW": 57,
+        "svgH": 13,
+        "dx": 348.5,
+        "dy": 0,
+        "anchorY": 271.60879955267706,
+        "svg": "640x360-employer-ru-telegram.svg",
+        "nodeId": null
+      },
+      {
+        "role": "phone",
+        "x": 265,
+        "y": 275.8,
+        "svgW": 110,
+        "svgH": 10,
+        "dx": 375,
+        "dy": 0,
+        "anchorY": 271.60879955267706,
+        "svg": "640x360-employer-ru-phone.svg",
         "nodeId": null
       }
     ]
@@ -3226,31 +3272,77 @@
     "drawnW": 640,
     "drawnH": 360,
     "derived": true,
-    "static": true,
-    "family": "static 22% ink",
-    "k": 2.55,
+    "static": false,
+    "family": "stacked",
+    "k": 1.37,
     "bgPan": 0,
     "layers": [
       {
         "role": "logo",
-        "x": 260.7,
-        "y": 102.8,
-        "svgW": 119,
-        "svgH": 39,
-        "dx": 379.3,
+        "x": 268.6,
+        "y": 72.2,
+        "svgW": 103,
+        "svgH": 34,
+        "dx": 371.4,
         "dy": 0,
         "svg": "640x360-employer-tj-logo.svg",
         "nodeId": null
       },
       {
         "role": "headline",
-        "x": 73.5,
-        "y": 164.2,
-        "svgW": 493,
-        "svgH": 93,
-        "dx": -566.5,
+        "x": 80,
+        "y": 128.1,
+        "svgW": 480,
+        "svgH": 23,
+        "dx": -560,
         "dy": 0,
         "svg": "640x360-employer-tj-headline.svg",
+        "nodeId": null
+      },
+      {
+        "role": "subline",
+        "x": 193,
+        "y": 164.8,
+        "svgW": 254,
+        "svgH": 14,
+        "dx": -447,
+        "dy": 0,
+        "svg": "640x360-employer-tj-subline.svg",
+        "nodeId": null
+      },
+      {
+        "role": "cta",
+        "x": 207.5,
+        "y": 203.4,
+        "svgW": 225,
+        "svgH": 34,
+        "dx": -432.5,
+        "dy": 0,
+        "svg": "640x360-employer-tj-cta.svg",
+        "nodeId": null
+      },
+      {
+        "role": "telegram",
+        "x": 291.5,
+        "y": 259.4,
+        "svgW": 57,
+        "svgH": 13,
+        "dx": 348.5,
+        "dy": 0,
+        "anchorY": 273.60879955267706,
+        "svg": "640x360-employer-tj-telegram.svg",
+        "nodeId": null
+      },
+      {
+        "role": "phone",
+        "x": 265,
+        "y": 277.8,
+        "svgW": 110,
+        "svgH": 10,
+        "dx": 375,
+        "dy": 0,
+        "anchorY": 273.60879955267706,
+        "svg": "640x360-employer-tj-phone.svg",
         "nodeId": null
       }
     ]
@@ -3266,31 +3358,77 @@
     "drawnW": 640,
     "drawnH": 360,
     "derived": true,
-    "static": true,
-    "family": "static 24% ink",
-    "k": 3.55,
+    "static": false,
+    "family": "stacked",
+    "k": 1.37,
     "bgPan": 0,
     "layers": [
       {
         "role": "logo",
-        "x": 237.5,
-        "y": 79.8,
-        "svgW": 165,
-        "svgH": 55,
-        "dx": 402.5,
+        "x": 268.6,
+        "y": 75.2,
+        "svgW": 103,
+        "svgH": 34,
+        "dx": 371.4,
         "dy": 0,
         "svg": "640x360-jobseeker-ru-logo.svg",
         "nodeId": null
       },
       {
         "role": "headline",
-        "x": 116,
-        "y": 165.2,
-        "svgW": 408,
-        "svgH": 115,
-        "dx": -524,
+        "x": 195,
+        "y": 131.1,
+        "svgW": 250,
+        "svgH": 17,
+        "dx": -445,
         "dy": 0,
         "svg": "640x360-jobseeker-ru-headline.svg",
+        "nodeId": null
+      },
+      {
+        "role": "subline",
+        "x": 237,
+        "y": 161.8,
+        "svgW": 166,
+        "svgH": 15,
+        "dx": -403,
+        "dy": 0,
+        "svg": "640x360-jobseeker-ru-subline.svg",
+        "nodeId": null
+      },
+      {
+        "role": "cta",
+        "x": 222.5,
+        "y": 201.4,
+        "svgW": 195,
+        "svgH": 33,
+        "dx": -417.5,
+        "dy": 0,
+        "svg": "640x360-jobseeker-ru-cta.svg",
+        "nodeId": null
+      },
+      {
+        "role": "telegram",
+        "x": 291.5,
+        "y": 256.4,
+        "svgW": 57,
+        "svgH": 13,
+        "dx": 348.5,
+        "dy": 0,
+        "anchorY": 270.60879955267706,
+        "svg": "640x360-jobseeker-ru-telegram.svg",
+        "nodeId": null
+      },
+      {
+        "role": "phone",
+        "x": 265,
+        "y": 274.8,
+        "svgW": 110,
+        "svgH": 10,
+        "dx": 375,
+        "dy": 0,
+        "anchorY": 270.60879955267706,
+        "svg": "640x360-jobseeker-ru-phone.svg",
         "nodeId": null
       }
     ]
@@ -3306,31 +3444,77 @@
     "drawnW": 640,
     "drawnH": 360,
     "derived": true,
-    "static": true,
-    "family": "static 25% ink",
-    "k": 2.95,
+    "static": false,
+    "family": "stacked",
+    "k": 1.37,
     "bgPan": 0,
     "layers": [
       {
         "role": "logo",
-        "x": 251.4,
-        "y": 89,
-        "svgW": 137,
-        "svgH": 45,
-        "dx": 388.6,
+        "x": 268.6,
+        "y": 72.2,
+        "svgW": 103,
+        "svgH": 34,
+        "dx": 371.4,
         "dy": 0,
         "svg": "640x360-jobseeker-tj-logo.svg",
         "nodeId": null
       },
       {
         "role": "headline",
-        "x": 91.5,
-        "y": 160,
-        "svgW": 457,
-        "svgH": 111,
-        "dx": -548.5,
+        "x": 153.5,
+        "y": 128.1,
+        "svgW": 333,
+        "svgH": 23,
+        "dx": -486.5,
         "dy": 0,
         "svg": "640x360-jobseeker-tj-headline.svg",
+        "nodeId": null
+      },
+      {
+        "role": "subline",
+        "x": 193,
+        "y": 164.8,
+        "svgW": 254,
+        "svgH": 14,
+        "dx": -447,
+        "dy": 0,
+        "svg": "640x360-jobseeker-tj-subline.svg",
+        "nodeId": null
+      },
+      {
+        "role": "cta",
+        "x": 259.5,
+        "y": 203.4,
+        "svgW": 121,
+        "svgH": 34,
+        "dx": -380.5,
+        "dy": 0,
+        "svg": "640x360-jobseeker-tj-cta.svg",
+        "nodeId": null
+      },
+      {
+        "role": "telegram",
+        "x": 291.5,
+        "y": 259.4,
+        "svgW": 57,
+        "svgH": 13,
+        "dx": 348.5,
+        "dy": 0,
+        "anchorY": 273.60879955267706,
+        "svg": "640x360-jobseeker-tj-telegram.svg",
+        "nodeId": null
+      },
+      {
+        "role": "phone",
+        "x": 265,
+        "y": 277.8,
+        "svgW": 110,
+        "svgH": 10,
+        "dx": 375,
+        "dy": 0,
+        "anchorY": 273.60879955267706,
+        "svg": "640x360-jobseeker-tj-phone.svg",
         "nodeId": null
       }
     ]
@@ -3346,31 +3530,66 @@
     "drawnW": 640,
     "drawnH": 360,
     "derived": true,
-    "static": true,
-    "family": "static 20% ink",
-    "k": 2.3,
+    "static": false,
+    "family": "stacked",
+    "k": 1.37,
     "bgPan": 0,
     "layers": [
       {
         "role": "logo",
-        "x": 266.5,
-        "y": 108.9,
-        "svgW": 107,
-        "svgH": 35,
-        "dx": 373.5,
+        "x": 268.6,
+        "y": 71.5,
+        "svgW": 103,
+        "svgH": 34,
+        "dx": 371.4,
         "dy": 0,
         "svg": "640x360-brand-ru-logo.svg",
         "nodeId": null
       },
       {
         "role": "headline",
-        "x": 74.5,
-        "y": 164.1,
-        "svgW": 491,
-        "svgH": 87,
-        "dx": -565.5,
+        "x": 105.5,
+        "y": 127.4,
+        "svgW": 429,
+        "svgH": 53,
+        "dx": -534.5,
         "dy": 0,
         "svg": "640x360-brand-ru-headline.svg",
+        "nodeId": null
+      },
+      {
+        "role": "cta",
+        "x": 222.5,
+        "y": 205.1,
+        "svgW": 195,
+        "svgH": 33,
+        "dx": -417.5,
+        "dy": 0,
+        "svg": "640x360-brand-ru-cta.svg",
+        "nodeId": null
+      },
+      {
+        "role": "telegram",
+        "x": 291.5,
+        "y": 260,
+        "svgW": 57,
+        "svgH": 13,
+        "dx": 348.5,
+        "dy": 0,
+        "anchorY": 274.2563467752387,
+        "svg": "640x360-brand-ru-telegram.svg",
+        "nodeId": null
+      },
+      {
+        "role": "phone",
+        "x": 265,
+        "y": 278.5,
+        "svgW": 110,
+        "svgH": 10,
+        "dx": 375,
+        "dy": 0,
+        "anchorY": 274.2563467752387,
+        "svg": "640x360-brand-ru-phone.svg",
         "nodeId": null
       }
     ]
@@ -3386,31 +3605,66 @@
     "drawnW": 640,
     "drawnH": 360,
     "derived": true,
-    "static": true,
-    "family": "static 24% ink",
-    "k": 2.2,
+    "static": false,
+    "family": "stacked",
+    "k": 1.37,
     "bgPan": 0,
     "layers": [
       {
         "role": "logo",
-        "x": 268.8,
-        "y": 91.1,
-        "svgW": 102,
+        "x": 268.6,
+        "y": 72.5,
+        "svgW": 103,
         "svgH": 34,
-        "dx": 371.2,
+        "dx": 371.4,
         "dy": 0,
         "svg": "640x360-brand-tj-logo.svg",
         "nodeId": null
       },
       {
         "role": "headline",
-        "x": 111.5,
-        "y": 143.9,
-        "svgW": 417,
-        "svgH": 125,
-        "dx": -528.5,
+        "x": 51,
+        "y": 128.4,
+        "svgW": 538,
+        "svgH": 50,
+        "dx": -589,
         "dy": 0,
         "svg": "640x360-brand-tj-headline.svg",
+        "nodeId": null
+      },
+      {
+        "role": "cta",
+        "x": 259.5,
+        "y": 203.1,
+        "svgW": 121,
+        "svgH": 34,
+        "dx": -380.5,
+        "dy": 0,
+        "svg": "640x360-brand-tj-cta.svg",
+        "nodeId": null
+      },
+      {
+        "role": "telegram",
+        "x": 291.5,
+        "y": 259,
+        "svgW": 57,
+        "svgH": 13,
+        "dx": 348.5,
+        "dy": 0,
+        "anchorY": 273.2563467752387,
+        "svg": "640x360-brand-tj-telegram.svg",
+        "nodeId": null
+      },
+      {
+        "role": "phone",
+        "x": 265,
+        "y": 277.5,
+        "svgW": 110,
+        "svgH": 10,
+        "dx": 375,
+        "dy": 0,
+        "anchorY": 273.2563467752387,
+        "svg": "640x360-brand-tj-phone.svg",
         "nodeId": null
       }
     ]
@@ -5506,7 +5760,7 @@
       {
         "role": "logo",
         "x": 195.6,
-        "y": 52,
+        "y": 68.9,
         "svgW": 89,
         "svgH": 29,
         "dx": 284.4,
@@ -5517,7 +5771,7 @@
       {
         "role": "headline",
         "x": 43.5,
-        "y": 100.3,
+        "y": 117.2,
         "svgW": 393,
         "svgH": 20,
         "dx": -436.5,
@@ -5528,7 +5782,7 @@
       {
         "role": "subline",
         "x": 144,
-        "y": 132.1,
+        "y": 149.1,
         "svgW": 192,
         "svgH": 12,
         "dx": -336,
@@ -5539,7 +5793,7 @@
       {
         "role": "cta",
         "x": 152.5,
-        "y": 165.5,
+        "y": 182.4,
         "svgW": 175,
         "svgH": 25,
         "dx": -327.5,
@@ -5550,24 +5804,24 @@
       {
         "role": "telegram",
         "x": 215.5,
-        "y": 209.4,
+        "y": 226.3,
         "svgW": 49,
         "svgH": 11,
         "dx": 264.5,
         "dy": 0,
-        "anchorY": 221.7841678945323,
+        "anchorY": 238.71680184299336,
         "svg": "480x320-employer-ru-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 192.5,
-        "y": 225.2,
+        "y": 242.1,
         "svgW": 95,
         "svgH": 9,
         "dx": 287.5,
         "dy": 0,
-        "anchorY": 221.7841678945323,
+        "anchorY": 238.71680184299336,
         "svg": "480x320-employer-ru-phone.svg",
         "nodeId": null
       }
@@ -5592,7 +5846,7 @@
       {
         "role": "logo",
         "x": 195.6,
-        "y": 50.6,
+        "y": 66.9,
         "svgW": 89,
         "svgH": 29,
         "dx": 284.4,
@@ -5603,7 +5857,7 @@
       {
         "role": "headline",
         "x": 32.5,
-        "y": 98.9,
+        "y": 115.2,
         "svgW": 415,
         "svgH": 20,
         "dx": -447.5,
@@ -5614,7 +5868,7 @@
       {
         "role": "subline",
         "x": 130,
-        "y": 130.8,
+        "y": 147.1,
         "svgW": 220,
         "svgH": 12,
         "dx": -350,
@@ -5625,7 +5879,7 @@
       {
         "role": "cta",
         "x": 143,
-        "y": 164.1,
+        "y": 180.4,
         "svgW": 194,
         "svgH": 29,
         "dx": -337,
@@ -5636,24 +5890,24 @@
       {
         "role": "telegram",
         "x": 215.5,
-        "y": 212.1,
+        "y": 228.3,
         "svgW": 49,
         "svgH": 11,
         "dx": 264.5,
         "dy": 0,
-        "anchorY": 224.42416789453227,
+        "anchorY": 240.71680184299336,
         "svg": "480x320-employer-tj-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 192.5,
-        "y": 227.8,
+        "y": 244.1,
         "svgW": 95,
         "svgH": 9,
         "dx": 287.5,
         "dy": 0,
-        "anchorY": 224.42416789453227,
+        "anchorY": 240.71680184299336,
         "svg": "480x320-employer-tj-phone.svg",
         "nodeId": null
       }
@@ -5678,7 +5932,7 @@
       {
         "role": "logo",
         "x": 195.6,
-        "y": 52.7,
+        "y": 69.9,
         "svgW": 89,
         "svgH": 29,
         "dx": 284.4,
@@ -5689,7 +5943,7 @@
       {
         "role": "headline",
         "x": 132,
-        "y": 101,
+        "y": 118.2,
         "svgW": 216,
         "svgH": 15,
         "dx": -348,
@@ -5700,7 +5954,7 @@
       {
         "role": "subline",
         "x": 168,
-        "y": 127.8,
+        "y": 145.1,
         "svgW": 144,
         "svgH": 12,
         "dx": -312,
@@ -5711,7 +5965,7 @@
       {
         "role": "cta",
         "x": 156,
-        "y": 161.1,
+        "y": 178.4,
         "svgW": 168,
         "svgH": 28,
         "dx": -324,
@@ -5722,24 +5976,24 @@
       {
         "role": "telegram",
         "x": 215.5,
-        "y": 208.1,
+        "y": 225.3,
         "svgW": 49,
         "svgH": 11,
         "dx": 264.5,
         "dy": 0,
-        "anchorY": 220.46416789453227,
+        "anchorY": 237.71680184299336,
         "svg": "480x320-jobseeker-ru-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 192.5,
-        "y": 223.8,
+        "y": 241.1,
         "svgW": 95,
         "svgH": 9,
         "dx": 287.5,
         "dy": 0,
-        "anchorY": 220.46416789453227,
+        "anchorY": 237.71680184299336,
         "svg": "480x320-jobseeker-ru-phone.svg",
         "nodeId": null
       }
@@ -5764,7 +6018,7 @@
       {
         "role": "logo",
         "x": 195.6,
-        "y": 50.6,
+        "y": 66.9,
         "svgW": 89,
         "svgH": 29,
         "dx": 284.4,
@@ -5775,7 +6029,7 @@
       {
         "role": "headline",
         "x": 96.5,
-        "y": 98.9,
+        "y": 115.2,
         "svgW": 287,
         "svgH": 20,
         "dx": -383.5,
@@ -5786,7 +6040,7 @@
       {
         "role": "subline",
         "x": 130,
-        "y": 130.8,
+        "y": 147.1,
         "svgW": 220,
         "svgH": 12,
         "dx": -350,
@@ -5797,7 +6051,7 @@
       {
         "role": "cta",
         "x": 188,
-        "y": 164.1,
+        "y": 180.4,
         "svgW": 104,
         "svgH": 29,
         "dx": -292,
@@ -5808,24 +6062,24 @@
       {
         "role": "telegram",
         "x": 215.5,
-        "y": 212.1,
+        "y": 228.3,
         "svgW": 49,
         "svgH": 11,
         "dx": 264.5,
         "dy": 0,
-        "anchorY": 224.42416789453227,
+        "anchorY": 240.71680184299336,
         "svg": "480x320-jobseeker-tj-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 192.5,
-        "y": 227.8,
+        "y": 244.1,
         "svgW": 95,
         "svgH": 9,
         "dx": 287.5,
         "dy": 0,
-        "anchorY": 224.42416789453227,
+        "anchorY": 240.71680184299336,
         "svg": "480x320-jobseeker-tj-phone.svg",
         "nodeId": null
       }
@@ -5850,7 +6104,7 @@
       {
         "role": "logo",
         "x": 195.6,
-        "y": 50.6,
+        "y": 66.8,
         "svgW": 89,
         "svgH": 29,
         "dx": 284.4,
@@ -5861,7 +6115,7 @@
       {
         "role": "headline",
         "x": 54.5,
-        "y": 98.9,
+        "y": 115.2,
         "svgW": 371,
         "svgH": 45,
         "dx": -425.5,
@@ -5872,7 +6126,7 @@
       {
         "role": "cta",
         "x": 156,
-        "y": 165.2,
+        "y": 181.5,
         "svgW": 168,
         "svgH": 28,
         "dx": -324,
@@ -5883,24 +6137,24 @@
       {
         "role": "telegram",
         "x": 215.5,
-        "y": 212.2,
+        "y": 228.4,
         "svgW": 49,
         "svgH": 11,
         "dx": 264.5,
         "dy": 0,
-        "anchorY": 224.5274015699154,
+        "anchorY": 240.79500917282905,
         "svg": "480x320-brand-ru-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 192.5,
-        "y": 227.9,
+        "y": 244.2,
         "svgW": 95,
         "svgH": 9,
         "dx": 287.5,
         "dy": 0,
-        "anchorY": 224.5274015699154,
+        "anchorY": 240.79500917282905,
         "svg": "480x320-brand-ru-phone.svg",
         "nodeId": null
       }
@@ -5925,7 +6179,7 @@
       {
         "role": "logo",
         "x": 195.6,
-        "y": 50.9,
+        "y": 67.3,
         "svgW": 89,
         "svgH": 29,
         "dx": 284.4,
@@ -5936,7 +6190,7 @@
       {
         "role": "headline",
         "x": 63,
-        "y": 99.2,
+        "y": 115.7,
         "svgW": 354,
         "svgH": 43,
         "dx": -417,
@@ -5947,7 +6201,7 @@
       {
         "role": "cta",
         "x": 188,
-        "y": 163.5,
+        "y": 180,
         "svgW": 104,
         "svgH": 29,
         "dx": -292,
@@ -5958,24 +6212,24 @@
       {
         "role": "telegram",
         "x": 215.5,
-        "y": 211.5,
+        "y": 227.9,
         "svgW": 49,
         "svgH": 11,
         "dx": 264.5,
         "dy": 0,
-        "anchorY": 223.8674015699154,
+        "anchorY": 240.29500917282905,
         "svg": "480x320-brand-tj-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 192.5,
-        "y": 227.2,
+        "y": 243.7,
         "svgW": 95,
         "svgH": 9,
         "dx": 287.5,
         "dy": 0,
-        "anchorY": 223.8674015699154,
+        "anchorY": 240.29500917282905,
         "svg": "480x320-brand-tj-phone.svg",
         "nodeId": null
       }
@@ -8310,7 +8564,7 @@
       {
         "role": "logo",
         "x": 432,
-        "y": 162.3,
+        "y": 220.8,
         "svgW": 160,
         "svgH": 53,
         "dx": 592,
@@ -8321,7 +8575,7 @@
       {
         "role": "headline",
         "x": 158.5,
-        "y": 249.3,
+        "y": 307.8,
         "svgW": 707,
         "svgH": 36,
         "dx": -865.5,
@@ -8332,7 +8586,7 @@
       {
         "role": "subline",
         "x": 340,
-        "y": 306.6,
+        "y": 365.1,
         "svgW": 344,
         "svgH": 22,
         "dx": -684,
@@ -8343,7 +8597,7 @@
       {
         "role": "cta",
         "x": 355,
-        "y": 367,
+        "y": 425.5,
         "svgW": 314,
         "svgH": 45,
         "dx": -669,
@@ -8354,24 +8608,24 @@
       {
         "role": "telegram",
         "x": 468,
-        "y": 446.1,
+        "y": 504.6,
         "svgW": 88,
         "svgH": 20,
         "dx": 556,
         "dy": 0,
-        "anchorY": 467.3974767278015,
+        "anchorY": 525.9037064241589,
         "svg": "1024x768-employer-ru-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 427.5,
-        "y": 474.7,
+        "y": 533.2,
         "svgW": 169,
         "svgH": 14,
         "dx": 596.5,
         "dy": 0,
-        "anchorY": 467.3974767278015,
+        "anchorY": 525.9037064241589,
         "svg": "1024x768-employer-ru-phone.svg",
         "nodeId": null
       }
@@ -8396,7 +8650,7 @@
       {
         "role": "logo",
         "x": 432,
-        "y": 159.9,
+        "y": 217.3,
         "svgW": 160,
         "svgH": 53,
         "dx": 592,
@@ -8407,7 +8661,7 @@
       {
         "role": "headline",
         "x": 139,
-        "y": 246.9,
+        "y": 304.3,
         "svgW": 746,
         "svgH": 36,
         "dx": -885,
@@ -8418,7 +8672,7 @@
       {
         "role": "subline",
         "x": 314.5,
-        "y": 304.3,
+        "y": 361.6,
         "svgW": 395,
         "svgH": 22,
         "dx": -709.5,
@@ -8429,7 +8683,7 @@
       {
         "role": "cta",
         "x": 338,
-        "y": 364.6,
+        "y": 422,
         "svgW": 348,
         "svgH": 52,
         "dx": -686,
@@ -8440,24 +8694,24 @@
       {
         "role": "telegram",
         "x": 468,
-        "y": 450.8,
+        "y": 508.1,
         "svgW": 88,
         "svgH": 20,
         "dx": 556,
         "dy": 0,
-        "anchorY": 472.0174767278015,
+        "anchorY": 529.4037064241589,
         "svg": "1024x768-employer-tj-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 427.5,
-        "y": 479.3,
+        "y": 536.7,
         "svgW": 169,
         "svgH": 14,
         "dx": 596.5,
         "dy": 0,
-        "anchorY": 472.0174767278015,
+        "anchorY": 529.4037064241589,
         "svg": "1024x768-employer-tj-phone.svg",
         "nodeId": null
       }
@@ -8482,7 +8736,7 @@
       {
         "role": "logo",
         "x": 432,
-        "y": 164,
+        "y": 223.3,
         "svgW": 160,
         "svgH": 53,
         "dx": 592,
@@ -8493,7 +8747,7 @@
       {
         "role": "headline",
         "x": 317.5,
-        "y": 251,
+        "y": 310.3,
         "svgW": 389,
         "svgH": 25,
         "dx": -706.5,
@@ -8504,7 +8758,7 @@
       {
         "role": "subline",
         "x": 383.5,
-        "y": 297.3,
+        "y": 356.6,
         "svgW": 257,
         "svgH": 22,
         "dx": -640.5,
@@ -8515,7 +8769,7 @@
       {
         "role": "cta",
         "x": 361,
-        "y": 357.7,
+        "y": 417,
         "svgW": 302,
         "svgH": 51,
         "dx": -663,
@@ -8526,24 +8780,24 @@
       {
         "role": "telegram",
         "x": 468,
-        "y": 442.8,
+        "y": 502.1,
         "svgW": 88,
         "svgH": 20,
         "dx": 556,
         "dy": 0,
-        "anchorY": 464.0974767278015,
+        "anchorY": 523.4037064241589,
         "svg": "1024x768-jobseeker-ru-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 427.5,
-        "y": 471.4,
+        "y": 530.7,
         "svgW": 169,
         "svgH": 14,
         "dx": 596.5,
         "dy": 0,
-        "anchorY": 464.0974767278015,
+        "anchorY": 523.4037064241589,
         "svg": "1024x768-jobseeker-ru-phone.svg",
         "nodeId": null
       }
@@ -8568,7 +8822,7 @@
       {
         "role": "logo",
         "x": 432,
-        "y": 159.9,
+        "y": 217.3,
         "svgW": 160,
         "svgH": 53,
         "dx": 592,
@@ -8579,7 +8833,7 @@
       {
         "role": "headline",
         "x": 253.5,
-        "y": 246.9,
+        "y": 304.3,
         "svgW": 517,
         "svgH": 36,
         "dx": -770.5,
@@ -8590,7 +8844,7 @@
       {
         "role": "subline",
         "x": 314.5,
-        "y": 304.3,
+        "y": 361.6,
         "svgW": 395,
         "svgH": 22,
         "dx": -709.5,
@@ -8601,7 +8855,7 @@
       {
         "role": "cta",
         "x": 419,
-        "y": 364.6,
+        "y": 422,
         "svgW": 186,
         "svgH": 52,
         "dx": -605,
@@ -8612,24 +8866,24 @@
       {
         "role": "telegram",
         "x": 468,
-        "y": 450.8,
+        "y": 508.1,
         "svgW": 88,
         "svgH": 20,
         "dx": 556,
         "dy": 0,
-        "anchorY": 472.0174767278015,
+        "anchorY": 529.4037064241589,
         "svg": "1024x768-jobseeker-tj-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 427.5,
-        "y": 479.3,
+        "y": 536.7,
         "svgW": 169,
         "svgH": 14,
         "dx": 596.5,
         "dy": 0,
-        "anchorY": 472.0174767278015,
+        "anchorY": 529.4037064241589,
         "svg": "1024x768-jobseeker-tj-phone.svg",
         "nodeId": null
       }
@@ -8654,7 +8908,7 @@
       {
         "role": "logo",
         "x": 432,
-        "y": 159.7,
+        "y": 217,
         "svgW": 160,
         "svgH": 53,
         "dx": 592,
@@ -8665,7 +8919,7 @@
       {
         "role": "headline",
         "x": 178.5,
-        "y": 246.7,
+        "y": 304,
         "svgW": 667,
         "svgH": 81,
         "dx": -845.5,
@@ -8676,7 +8930,7 @@
       {
         "role": "cta",
         "x": 361,
-        "y": 366.1,
+        "y": 423.4,
         "svgW": 302,
         "svgH": 51,
         "dx": -663,
@@ -8687,24 +8941,24 @@
       {
         "role": "telegram",
         "x": 468,
-        "y": 451.2,
+        "y": 508.5,
         "svgW": 88,
         "svgH": 20,
         "dx": 556,
         "dy": 0,
-        "anchorY": 472.4652016712107,
+        "anchorY": 529.7428919873477,
         "svg": "1024x768-brand-ru-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 427.5,
-        "y": 479.7,
+        "y": 537,
         "svgW": 169,
         "svgH": 14,
         "dx": 596.5,
         "dy": 0,
-        "anchorY": 472.4652016712107,
+        "anchorY": 529.7428919873477,
         "svg": "1024x768-brand-ru-phone.svg",
         "nodeId": null
       }
@@ -8729,7 +8983,7 @@
       {
         "role": "logo",
         "x": 432,
-        "y": 160.7,
+        "y": 218.5,
         "svgW": 160,
         "svgH": 53,
         "dx": 592,
@@ -8740,7 +8994,7 @@
       {
         "role": "headline",
         "x": 93.5,
-        "y": 247.7,
+        "y": 305.5,
         "svgW": 837,
         "svgH": 77,
         "dx": -930.5,
@@ -8751,7 +9005,7 @@
       {
         "role": "cta",
         "x": 419,
-        "y": 363.1,
+        "y": 420.9,
         "svgW": 186,
         "svgH": 52,
         "dx": -605,
@@ -8762,24 +9016,24 @@
       {
         "role": "telegram",
         "x": 468,
-        "y": 449.2,
+        "y": 507,
         "svgW": 88,
         "svgH": 20,
         "dx": 556,
         "dy": 0,
-        "anchorY": 470.4852016712108,
+        "anchorY": 528.2428919873477,
         "svg": "1024x768-brand-tj-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 427.5,
-        "y": 477.7,
+        "y": 535.5,
         "svgW": 169,
         "svgH": 14,
         "dx": 596.5,
         "dy": 0,
-        "anchorY": 470.4852016712108,
+        "anchorY": 528.2428919873477,
         "svg": "1024x768-brand-tj-phone.svg",
         "nodeId": null
       }
@@ -10286,7 +10540,7 @@
       {
         "role": "logo",
         "x": 846.6,
-        "y": 228.3,
+        "y": 310.3,
         "svgW": 227,
         "svgH": 75,
         "dx": 1073.4,
@@ -10297,7 +10551,7 @@
       {
         "role": "headline",
         "x": 459,
-        "y": 351.6,
+        "y": 433.6,
         "svgW": 1002,
         "svgH": 51,
         "dx": -1461,
@@ -10308,7 +10562,7 @@
       {
         "role": "subline",
         "x": 716.5,
-        "y": 432.8,
+        "y": 514.8,
         "svgW": 487,
         "svgH": 30,
         "dx": -1203.5,
@@ -10319,7 +10573,7 @@
       {
         "role": "cta",
         "x": 737.5,
-        "y": 517.2,
+        "y": 599.3,
         "svgW": 445,
         "svgH": 63,
         "dx": -1182.5,
@@ -10330,24 +10584,24 @@
       {
         "role": "telegram",
         "x": 898,
-        "y": 628.6,
+        "y": 710.6,
         "svgW": 124,
         "svgH": 27,
         "dx": 1022,
         "dy": 0,
-        "anchorY": 658.1522735060946,
+        "anchorY": 740.1649306928068,
         "svg": "1920x1080-employer-ru-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 840,
-        "y": 667.7,
+        "y": 749.7,
         "svgW": 240,
         "svgH": 20,
         "dx": 1080,
         "dy": 0,
-        "anchorY": 658.1522735060946,
+        "anchorY": 740.1649306928068,
         "svg": "1920x1080-employer-ru-phone.svg",
         "nodeId": null
       }
@@ -10372,7 +10626,7 @@
       {
         "role": "logo",
         "x": 846.6,
-        "y": 224.9,
+        "y": 305.3,
         "svgW": 227,
         "svgH": 75,
         "dx": 1073.4,
@@ -10383,7 +10637,7 @@
       {
         "role": "headline",
         "x": 431.5,
-        "y": 348.2,
+        "y": 428.6,
         "svgW": 1057,
         "svgH": 51,
         "dx": -1488.5,
@@ -10394,7 +10648,7 @@
       {
         "role": "subline",
         "x": 680.5,
-        "y": 429.4,
+        "y": 509.8,
         "svgW": 559,
         "svgH": 30,
         "dx": -1239.5,
@@ -10405,7 +10659,7 @@
       {
         "role": "cta",
         "x": 713.5,
-        "y": 513.8,
+        "y": 594.3,
         "svgW": 493,
         "svgH": 73,
         "dx": -1206.5,
@@ -10416,24 +10670,24 @@
       {
         "role": "telegram",
         "x": 898,
-        "y": 635.2,
+        "y": 715.6,
         "svgW": 124,
         "svgH": 27,
         "dx": 1022,
         "dy": 0,
-        "anchorY": 664.7522735060946,
+        "anchorY": 745.1649306928068,
         "svg": "1920x1080-employer-tj-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 840,
-        "y": 674.3,
+        "y": 754.7,
         "svgW": 240,
         "svgH": 20,
         "dx": 1080,
         "dy": 0,
-        "anchorY": 664.7522735060946,
+        "anchorY": 745.1649306928068,
         "svg": "1920x1080-employer-tj-phone.svg",
         "nodeId": null
       }
@@ -10458,7 +10712,7 @@
       {
         "role": "logo",
         "x": 846.6,
-        "y": 230.7,
+        "y": 313.8,
         "svgW": 227,
         "svgH": 75,
         "dx": 1073.4,
@@ -10469,7 +10723,7 @@
       {
         "role": "headline",
         "x": 684,
-        "y": 354,
+        "y": 437.1,
         "svgW": 552,
         "svgH": 35,
         "dx": -1236,
@@ -10480,7 +10734,7 @@
       {
         "role": "subline",
         "x": 778,
-        "y": 419.2,
+        "y": 502.3,
         "svgW": 364,
         "svgH": 31,
         "dx": -1142,
@@ -10491,7 +10745,7 @@
       {
         "role": "cta",
         "x": 746.5,
-        "y": 504.6,
+        "y": 587.8,
         "svgW": 427,
         "svgH": 71,
         "dx": -1173.5,
@@ -10502,24 +10756,24 @@
       {
         "role": "telegram",
         "x": 898,
-        "y": 624,
+        "y": 707.1,
         "svgW": 124,
         "svgH": 27,
         "dx": 1022,
         "dy": 0,
-        "anchorY": 653.5322735060946,
+        "anchorY": 736.6649306928068,
         "svg": "1920x1080-jobseeker-ru-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 840,
-        "y": 663.1,
+        "y": 746.2,
         "svgW": 240,
         "svgH": 20,
         "dx": 1080,
         "dy": 0,
-        "anchorY": 653.5322735060946,
+        "anchorY": 736.6649306928068,
         "svg": "1920x1080-jobseeker-ru-phone.svg",
         "nodeId": null
       }
@@ -10544,7 +10798,7 @@
       {
         "role": "logo",
         "x": 846.6,
-        "y": 224.9,
+        "y": 305.3,
         "svgW": 227,
         "svgH": 75,
         "dx": 1073.4,
@@ -10555,7 +10809,7 @@
       {
         "role": "headline",
         "x": 594,
-        "y": 348.2,
+        "y": 428.6,
         "svgW": 732,
         "svgH": 51,
         "dx": -1326,
@@ -10566,7 +10820,7 @@
       {
         "role": "subline",
         "x": 680.5,
-        "y": 429.4,
+        "y": 509.8,
         "svgW": 559,
         "svgH": 30,
         "dx": -1239.5,
@@ -10577,7 +10831,7 @@
       {
         "role": "cta",
         "x": 828.5,
-        "y": 513.8,
+        "y": 594.3,
         "svgW": 263,
         "svgH": 73,
         "dx": -1091.5,
@@ -10588,24 +10842,24 @@
       {
         "role": "telegram",
         "x": 898,
-        "y": 635.2,
+        "y": 715.6,
         "svgW": 124,
         "svgH": 27,
         "dx": 1022,
         "dy": 0,
-        "anchorY": 664.7522735060946,
+        "anchorY": 745.1649306928068,
         "svg": "1920x1080-jobseeker-tj-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 840,
-        "y": 674.3,
+        "y": 754.7,
         "svgW": 240,
         "svgH": 20,
         "dx": 1080,
         "dy": 0,
-        "anchorY": 664.7522735060946,
+        "anchorY": 745.1649306928068,
         "svg": "1920x1080-jobseeker-tj-phone.svg",
         "nodeId": null
       }
@@ -10630,7 +10884,7 @@
       {
         "role": "logo",
         "x": 846.6,
-        "y": 246,
+        "y": 336.4,
         "svgW": 227,
         "svgH": 75,
         "dx": 1073.4,
@@ -10641,7 +10895,7 @@
       {
         "role": "headline",
         "x": 210,
-        "y": 369.4,
+        "y": 459.7,
         "svgW": 1500,
         "svgH": 51,
         "dx": -1710,
@@ -10652,7 +10906,7 @@
       {
         "role": "cta",
         "x": 746.5,
-        "y": 474.8,
+        "y": 565.1,
         "svgW": 427,
         "svgH": 71,
         "dx": -1173.5,
@@ -10663,24 +10917,24 @@
       {
         "role": "telegram",
         "x": 898,
-        "y": 594.1,
+        "y": 684.5,
         "svgW": 124,
         "svgH": 27,
         "dx": 1022,
         "dy": 0,
-        "anchorY": 623.6820720303275,
+        "anchorY": 714.0511416960136,
         "svg": "1920x1080-brand-ru-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 840,
-        "y": 633.2,
+        "y": 723.6,
         "svgW": 240,
         "svgH": 20,
         "dx": 1080,
         "dy": 0,
-        "anchorY": 623.6820720303275,
+        "anchorY": 714.0511416960136,
         "svg": "1920x1080-brand-ru-phone.svg",
         "nodeId": null
       }
@@ -10705,7 +10959,7 @@
       {
         "role": "logo",
         "x": 846.6,
-        "y": 245.4,
+        "y": 335.4,
         "svgW": 227,
         "svgH": 75,
         "dx": 1073.4,
@@ -10716,7 +10970,7 @@
       {
         "role": "headline",
         "x": 140.5,
-        "y": 368.7,
+        "y": 458.7,
         "svgW": 1639,
         "svgH": 51,
         "dx": -1779.5,
@@ -10727,7 +10981,7 @@
       {
         "role": "cta",
         "x": 828.5,
-        "y": 474.1,
+        "y": 564.1,
         "svgW": 263,
         "svgH": 73,
         "dx": -1091.5,
@@ -10738,24 +10992,24 @@
       {
         "role": "telegram",
         "x": 898,
-        "y": 595.5,
+        "y": 685.5,
         "svgW": 124,
         "svgH": 27,
         "dx": 1022,
         "dy": 0,
-        "anchorY": 625.0020720303276,
+        "anchorY": 715.0511416960136,
         "svg": "1920x1080-brand-tj-telegram.svg",
         "nodeId": null
       },
       {
         "role": "phone",
         "x": 840,
-        "y": 634.5,
+        "y": 724.6,
         "svgW": 240,
         "svgH": 20,
         "dx": 1080,
         "dy": 0,
-        "anchorY": 625.0020720303276,
+        "anchorY": 715.0511416960136,
         "svg": "1920x1080-brand-tj-phone.svg",
         "nodeId": null
       }

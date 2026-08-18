@@ -85,9 +85,7 @@ for (const s of spec) {
   const padX = (w - s.drawnW) / 2, padY = (h - s.drawnH) / 2;
   if (padX || padY) for (const l of layers) { l.x += padX; l.y += padY; }
 
-  // A static placement carries only what its layout put there — no borrowed contacts, no
-  // luminance nudging. Its rules come from the placement, not from our banner composition.
-  const stack = h >= STACK_MIN_H && !s.static;
+  const stack = h >= STACK_MIN_H;
 
   // Some comps are drawn without the contacts strip — "У нас вакансия" at 160x600 is one.
   // The handle and number are wanted on every creative, and they are set at the same size
