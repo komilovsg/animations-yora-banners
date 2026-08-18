@@ -32,6 +32,13 @@ const COPY = {
   },
 };
 
+const STATIC_HEADLINE = {
+  brand: {
+    ru: 'Yora.tj — вакансии по Таджикистану',
+    tj: 'Yora.tj — ҷойҳои корӣ дар Тоҷикистон',
+  },
+};
+
 const TELEGRAM = '@weyora';
 const PHONE = '+992 553 06 2222';
 
@@ -46,8 +53,12 @@ const LOGO = { w: 75, h: 24.8 };
 const CTA_PAD_X = 9, CTA_PAD_Y = 4.5;   // the comp's pill padding at base scale
 
 // Every size the client asked for. Those the comp already covers are skipped below.
+// 640x360 is the static placement: a JPG, not a banner. Its rules are different — text
+// must cover no more than 20-25% of the area — so it gets a stripped composition.
+const STATIC = new Set(['640x360']);
+
 const TARGETS = [
-  '300x600', '320x50', '320x100', '320x480', '336x280', '480x320', '728x90', '970x250',
+  '640x360', '300x600', '320x50', '320x100', '320x480', '336x280', '480x320', '728x90', '970x250',
   '1000x120', '480x32', '468x60', '768x1024', '1024x768', '1440x1440', '1440x1800',
   '1080x1920', '1920x1080', '1080x1350',
 ];
@@ -106,6 +117,40 @@ const text = (kind, s, k, maxWidth) => typeset({
 // Compose one creative. Returns the layer list, or null when nothing legible fits.
 function compose(w, h, message, lang) {
   const copy = COPY[message][lang];
+
+  // Static placement: logo and one headline, nothing else. The площадка caps text at a
+  // quarter of the canvas and asks for no fine print, so the CTA, the subline and the
+  // contacts all belong in the ad copy fields instead of on the image.
+  if (STATIC.has(`${w}x${h}`)) {
+    // The banner headline runs long for a 16:9 still and wraps to a ragged third line.
+    // The placement caps its own headline field at 40 characters anyway, so the static
+    // carries the short form.
+    const line = STATIC_HEADLINE[message]?.[lang] ?? copy.headline;
+    const pad = Math.round(w * 0.11);
+    const budget = w * h * 0.25;
+    for (let k = 6; k >= 1; k -= 0.05) {
+      const logo = { w: LOGO.w * k * 0.62, h: LOGO.h * k * 0.62 };
+      const head = text('headline', line, k, w - pad * 2);
+      if (head.width > w - pad * 2) continue;
+      if (head.lines > 3) continue;
+      const gap = 26 * (k / 3);
+      const block = logo.h + gap + head.height;
+      if (block > h - pad * 2) continue;
+      // Keep the ink area inside the placement's limit.
+      if (logo.w * logo.h + head.width * head.height > budget) continue;
+
+      let y = (h - block) / 2;
+      const layers = [
+        { role: 'logo', data: scaledLogo(logo.w, logo.h), x: (w - logo.w) / 2, y, svgW: Math.round(logo.w), svgH: Math.round(logo.h), dx: 1, dy: 0 },
+      ];
+      y += logo.h + gap;
+      layers.push({ role: 'headline', data: head.svg, x: (w - head.width) / 2, y, svgW: head.width, svgH: head.height, dx: -1, dy: 0 });
+      const pct = ((logo.w * logo.h + head.width * head.height) / (w * h) * 100);
+      return { layers, k, family: `static ${pct.toFixed(0)}% ink`, static: true };
+    }
+    return null;
+  }
+
   const strip = h < 70;
   const leaderboard = !strip && w / h > 2.2;
   const pad = Math.max(8, Math.round(Math.min(w, h) * 0.05));
@@ -222,7 +267,7 @@ for (const size of TARGETS) {
 
       added.push({
         size, drawn: size, message, lang, stem, w, h, drawnW: w, drawnH: h,
-        derived: true, family: out.family, k: +out.k.toFixed(2),
+        derived: true, static: !!out.static, family: out.family, k: +out.k.toFixed(2),
         bgPan: 0, layers,
       });
       console.log(`  ${stem.padEnd(28)} ${out.family.padEnd(11)} k=${out.k.toFixed(2)}  ${layers.length} layers`);
