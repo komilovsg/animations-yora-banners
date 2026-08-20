@@ -12,7 +12,10 @@
 import { readdirSync, existsSync, mkdirSync, writeFileSync, copyFileSync, rmSync, statSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 
-const STAMP = process.argv[2] ?? new Date().toISOString().slice(0, 10);
+// Always the real date. An override argument existed here and got used with a stale
+// value, which stamped a build made on the 20th as the 18th — the archive name is what
+// the recipient trusts to tell which handover they have.
+const STAMP = new Date().toISOString().slice(0, 10);
 
 // Size lists as the platforms publish them. Google also names each format, which is worth
 // carrying into the README — the person uploading picks the placement by that name.
