@@ -22,21 +22,15 @@
     border:1px solid rgba(0,0,0,.15)}
   .bg{position:absolute;left:0;top:0;width:970px;height:250px;will-change:transform}
   .l{position:absolute;will-change:transform;transform:translateZ(0)}
-  .scrim{position:absolute;pointer-events:none;left:408.14px;top:395.79px;
-    width:153.71px;height:57.62px;
-    background:radial-gradient(ellipse at center,rgba(0,0,0,0.50) 0%,rgba(0,0,0,0.28) 45%,rgba(0,0,0,0) 72%)}
+
   .l-headline{left:201.8px;top:89.8px;width:548px;height:51px;--dx:-749.8px;--dy:0px;animation:k-headline var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
   .l-logo{left:13px;top:107.7px;width:105px;height:35px;--dx:-118px;--dy:0px;animation:k-logo var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
   .l-cta{left:834px;top:108px;width:123px;height:34px;--dx:136px;--dy:0px;animation:k-cta var(--cycle) var(--plays) both cubic-bezier(.34,1.56,.64,1)}
   .l-contactline{left:398.3px;top:149.2px;width:155px;height:11px;--dx:571.7px;--dy:0px;animation:k-contactline var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
-  .l-telegram{left:457.51px;top:410.88px;width:54.99px;height:11.72px;--dx:512.49px;--dy:0px;animation:k-telegram var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
-  .l-phone{left:431.63px;top:426.6px;width:106.74px;height:11.72px;--dx:538.37px;--dy:0px;animation:k-phone var(--cycle) var(--plays) both cubic-bezier(.16,.84,.44,1)}
   @keyframes k-headline{0%,3%{transform:translate3d(var(--dx),var(--dy),0)}20%,100%{transform:translate3d(0,0,0)}}
   @keyframes k-logo{0%,7%{transform:translate3d(var(--dx),var(--dy),0)}24%,100%{transform:translate3d(0,0,0)}}
   @keyframes k-cta{0%,11%{transform:translate3d(var(--dx),var(--dy),0)}31%,100%{transform:translate3d(0,0,0)}}
   @keyframes k-contactline{0%,15%{transform:translate3d(var(--dx),var(--dy),0)}32%,100%{transform:translate3d(0,0,0)}}
-  @keyframes k-telegram{0%,19%{transform:translate3d(var(--dx),var(--dy),0)}36%,100%{transform:translate3d(0,0,0)}}
-  @keyframes k-phone{0%,23%{transform:translate3d(var(--dx),var(--dy),0)}40%,100%{transform:translate3d(0,0,0)}}
   /* backup.sh loads ?frame=end to screenshot the resting frame. */
   .end .bg,.end .l{animation:none!important}
   .end .bg{transform:translate3d(var(--pan,0),0,0)}
@@ -55,13 +49,10 @@
 <body>
 <div id="banner" role="link" aria-label="Yora.tj — Yora.tj">
   <img class="bg" src="assets/bg.jpg" alt="">
-  <div class="scrim"></div>
   <img class="l l-headline" src="assets/headline.svg" alt="">
   <img class="l l-logo" src="assets/logo.svg" alt="">
   <img class="l l-cta" src="assets/cta.svg" alt="">
   <img class="l l-contactline" src="assets/contactline.svg" alt="">
-  <img class="l l-telegram" src="assets/telegram.svg" alt="">
-  <img class="l l-phone" src="assets/phone.svg" alt="">
 </div>
 <script>
   // Ad servers rewrite this exact literal. Global var, first script, one string.

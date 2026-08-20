@@ -90,7 +90,10 @@ for (const s of spec) {
   // Some comps are drawn without the contacts strip — "У нас вакансия" at 160x600 is one.
   // The handle and number are wanted on every creative, and they are set at the same size
   // in every format, so borrow the lines from another creative, preferring the same size.
-  if (stack && !layers.some((l) => l.role === 'telegram')) {
+  // The horizontal families already carry the contacts as a single line, so only borrow
+  // when the creative has none at all — otherwise 970x250 ships both and prints the
+  // number twice.
+  if (stack && !layers.some((l) => l.role === 'telegram' || l.role === 'contactline')) {
     const donor = spec.find((d) => d.size === size && d.layers.some((l) => l.role === 'telegram'))
       ?? spec.find((d) => d.layers.some((l) => l.role === 'telegram'));
     if (!donor) {
